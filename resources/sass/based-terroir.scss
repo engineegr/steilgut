@@ -1,0 +1,401 @@
+.based-terroir {
+    .bg-based-terroir-pg-width-4_3 {
+        max-width: 69vw;
+        max-width: calc(var(--100nvw, 1vw) * 69);
+        width: 69vw;
+        width: calc(var(--100nvw, 1vw) * 69);
+    }
+
+    .bg-based-terroir-pg-width-16_9 {
+        max-width: 76vw;
+        max-width: calc(var(--100nvw, 1vw) * 76);
+        width: 76vw;
+        width: calc(var(--100nvw, 1vw) * 76);
+    }
+}
+
+.based-terroir-title h1 {
+    margin: calc(0.1em + 0.3vh) 0;
+    margin: calc(0.1em + var(--100nvh, 1vh) * 0.3) 0;
+}
+
+.title-underline-img {
+    width: 60%;
+}
+
+.based-terroir-content {
+    position: relative;
+    z-index: 2;
+    margin: 2em auto auto 16.583%;
+}
+
+.based-terroir-content .based-terroir-thread {
+    font-family: "steilgut_opensans";
+    font-weight: lighter;
+    margin: 0 auto 0.67em auto;
+    max-width: 55%;
+
+    font-size: calc(0.4em + 1.1vh);
+    font-size: calc(0.4em + var(--100nvh, 1vh) * 1.1);
+
+    line-height: 28px;
+    line-height: calc(1em + 1.3vh);
+    line-height: calc(1em + var(--100nvh, 1vh) * 1.3);
+}
+
+.based-terroir-thread h2.subheader {
+    font-weight: normal;
+    font-style: italic;
+    margin: 0.5em auto;
+}
+
+.based-terroir-thread section.based-terroir-paragraph {
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 2.5vh 0;
+    margin: calc(var(--100nvh, 1vh) * 2.5) 0;
+}
+
+.based-terroir-thread section.based-terroir-paragraph:first-child {
+    margin: 0;
+}
+
+.based-terroir-content .image-section {
+    margin: 0 auto;
+}
+
+.based-terroir-content div.image-container {
+    margin: 1.75em auto;
+    margin: calc(var(--100nvh, 1vh) * 2.5) auto;
+    max-width: 55%;
+    width: 55%;
+
+    // border: 2px solid red;
+}
+
+div.image-container section.image-section h2.img-subheader {
+    font-weight: normal;
+    font-style: italic;
+    margin: 0.5em auto;
+    color: #c4bbaa;
+    margin: 0.5em auto auto 0;
+    font-size: inherit;
+}
+
+.based-terroir-content div.inline-image-list {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.based-terroir-content div.inline-image-list section.image-section:first-child {
+    margin: auto calc(0.6em + 2vw) auto 0;
+}
+/*********************************************************************
+*
+*************************** MEDIA QUERIES ****************************
+* @link 
+* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+**********************************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    /* remove rounding corners */
+    textarea,
+    input[type="text"],
+    input[type="button"],
+    input[type="submit"] {
+        -webkit-appearance: none !important;
+        border-radius: 0 !important;
+    }
+
+    .based-terroir {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media only screen and (min-width: 320px) and (orientation: portrait) {
+    .based-terroir {
+        margin-top: -15vh;
+    }
+
+    .title .title-underline {
+        width: fit-content;
+    }
+
+    .title .title-underline-img {
+        width: 90%;
+    }
+
+    .title h1 {
+        font-size: calc(1rem + 3vmin);
+        margin: auto;
+    }
+
+    .based-terroir-content {
+        margin: auto 0;
+        padding: 3vh 5vw;
+    }
+
+    .based-terroir-content .based-terroir-thread,
+    .based-terroir-paragraph {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .based-terroir-content .based-terroir-thread {
+        line-height: 28px;
+        line-height: calc(0.5rem + 3vh);
+
+        font-size: calc(0.5rem + 2vw);
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph {
+        margin: 0 0 5.75vw 0;
+
+        line-height: 28px;
+        line-height: calc(0.7rem + 4vw);
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph:nth-child(2) {
+        margin: 0 0 5.75vw 0;
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph:last-child {
+        margin: 5.75vw 0 0 0;
+    }
+
+    .based-terroir-content .based-terroir-thread {
+        margin: auto 0;
+    }
+
+    .inline-image-list {
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .based-terroir-content div.image-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 4vw auto;
+    }
+
+    .based-terroir-content div.image-container section.image-section:first-child,
+    .based-terroir-content div.image-container section.image-section {
+        margin: 0 auto;
+        margin-bottom: 4vw;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .based-terroir-content div.image-container section.image-section:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+            .based-terroir {
+                top: -15vh;
+                margin-top: unset;
+            }
+        }
+    }
+}
+
+/*
+    * @link: https://websiteedu.com/media-queries-for-mobile-and-tablets/?__cf_chl_jschl_tk__=f4b85448ac9131968259f036667ebbe13f3aee4e-1620873849-0-AfVyBOo3EXzkNnPk3o7Y2fBiOHMOfi9Ez_ELD5YtZPhiuNEWff8cy4MUte33zch82L-l8ED6GNcOpaSmkrLTf-MBeOtEwaD0lOUn3JpenolXersHBNrzqH1P2EriQDQ0T3zRwahK5L0Dv1HaV6FtQjSWLbpUA3dzW6f9QfGllFDKoFKyFoeR7ma8DzneAa8_lg_P4uZKkDeDNYNeu4N5ZPGU8bYgv7OSYrlY17sKUZYScM5cG5IWZdKKED70KvynQtzyL22ETSPnUUSdew9gTFo3xTQhiOjCO-h79BHYAl9u9yUtrVPzZ1vXPuL3d8DXGM_Dw7rSMbTARgqzMPirmWcZZnYgYI_Ad_puGDQEky3Mg4ma4ltgGVG__BKE_JGL1Th8dKZhG3-48KTSJNAwh_vX0x3SCvVckdjUkcc4yQ0fkkTUeEy55KZ76yiqO35_PVGoQGj4yBIYAe84TKs8hdVDH7LqZuz_8MfLbzsyRExG0ri6AZhSfs999AwnI72B0g
+    *
+    * @link https://viewportsizer.com/devices/
+    *
+    * Samsung 
+    * S8,8+,9,9+,10: W360px - H740px 4x
+    * Galaxy S6, S7, S7 Edge: W360px - H640px 4x
+    * Galaxy S4, S5, Note 3: W360px - H640px 3x
+    * Galaxy Note 10, 10+: W360px - H718px 2x
+    * Galaxy Note 8, 9: W360px - H740px 4x
+    * Galaxy S20 Ultra, S20+, S20: W480 - H1067 3x-4x
+    *
+    * Iphone
+    * iPhone 5, 5C, 5S, SE: W320px - H568px 2x
+    * iPhone 6 Plus, 6S Plus, 7 Plus, 8 Plus: W414px - H736px 3x
+    * iPhone 6, 6S, 7, 8: W375px - H667px 2x
+    * iPhone XR, 11: W414px - H896px 2x
+    * iPhone XS Max, 11 Pro Max: 414px - 896px 3x
+    * iPhone X, XS, 11 Pro: 375px -  812px 3x
+*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    .based-terroir {
+        display: block;
+        z-index: 2;
+        min-height: 0;
+        max-height: unset;
+        height: auto;
+        margin-top: -26vh;
+
+        img.bg-based-terroir-pg-width-4_3 {
+            max-width: 69vw;
+            width: 69vw;
+        }
+
+        img.bg-based-terroir-pg-width-16_9 {
+            max-width: 76vw;
+            width: 76vw;
+        }
+    }
+
+    .based-terroir-content {
+        margin: 0 auto 3vw 38.583vw;
+    }
+
+    .based-terroir-title h1 {
+        margin: 2vh auto 2vh 0;
+    }
+
+    .based-terroir-content .based-terroir-thread {
+        max-width: 55vw;
+        margin: 0 auto;
+    }
+
+    .based-terroir-content div.image-container {
+        max-width: 90%;
+        width: 90%;
+        margin: 7vh auto;
+    }
+
+    .based-terroir-content .based-terroir-thread {
+        line-height: 28px;
+        line-height: calc(0.5rem + 3vh);
+
+        font-size: calc(0.5rem + 1.1vh);
+    }
+
+    .based-terroir-thread section.based-terroir-para {
+        margin: 3vh auto;
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph:nth-child(2) {
+        margin: 0 0 3vh 0;
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph:last-child {
+        margin: 3vh 0 0 0;
+    }
+
+    .based-terroir-content div.image-container section.image-section {
+        margin: 0 auto;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+        }
+    }
+}
+
+/* Laptops, desktops, large screens: [... 16/10) ----------- */
+@media only screen and (min-width: 1025px) and (max-aspect-ratio: 159/100) {
+    .based-terroir {
+        margin-top: -5vh;
+    }
+
+    .based-terroir-title h1 {
+        margin: calc(0.1em + 0.3vh) 0;
+        margin: calc(0.1em + var(--100nvh, 1vh) * 0.3) 0;
+    }
+
+    .title-underline-img {
+        width: 60%;
+    }
+
+    .based-terroir-content {
+        position: relative;
+        z-index: 2;
+        margin: 2em auto auto 16.583%;
+    }
+
+    .based-terroir-content .based-terroir-thread {
+        font-family: "steilgut_opensans";
+        font-weight: lighter;
+        margin: 0 auto 0.67em auto;
+        max-width: 55%;
+
+        font-size: calc(0.4em + 1.1vh);
+        font-size: calc(0.4em + var(--100nvh, 1vh) * 1.1);
+    }
+
+    .based-terroir-thread h2.subheader {
+        font-weight: normal;
+        font-style: italic;
+        margin: 0.5em auto;
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph {
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        margin: 2.5vh 0;
+        margin: calc(var(--100nvh, 1vh) * 2.5) 0;
+
+        line-height: 28px;
+        line-height: calc(1em + 1.3vh);
+        line-height: calc(1em + var(--100nvh, 1vh) * 1.3);
+    }
+
+    .based-terroir-thread section.based-terroir-paragraph:first-child {
+        margin: 0;
+    }
+
+    .based-terroir-content .image-section {
+        margin: 0 auto;
+    }
+
+    .based-terroir-content div.image-container {
+        margin: 1.75em auto;
+        margin: calc(var(--100nvh, 1vh) * 2.5) auto;
+        max-width: 55%;
+        width: 55%;
+
+        // border: 2px solid red;
+    }
+
+    div.image-container section.image-section h2.img-subheader {
+        font-weight: normal;
+        font-style: italic;
+        margin: 0.5em auto;
+        color: #c4bbaa;
+        margin: 0.5em auto auto 0;
+        font-size: 1rem;
+    }
+
+    .based-terroir-content div.inline-image-list {
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .based-terroir-content div.inline-image-list section.image-section:first-child {
+        margin: auto calc(0.6em + 2vw) auto 0;
+    }
+}
+
+/* Laptops, desktops, large screens: [16/10 ...] ----------- */
+@media only screen and (min-width: 1025px) and (min-aspect-ratio: 16/10) {
+    .based-terroir {
+        margin-top: 0;
+    }
+}

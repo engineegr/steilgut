@@ -1,0 +1,45 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$timing: 265ms;
+$iconColor: #00b5f5;
+$accent: #002a8f;
+$bluefade: #0043e0;
+$gradient: #00b5f5;
+
+/* Global variables */
+/* COLORS */
+$STEILGUT_WHITE_COLOR: #ffffff;
+$STEILGUT_BG_COLOR: #343434;
+$STEILGUT_GOLD_COLOR: #ebcb9a;
+$STEILGUT_BEIGE_COLOR: #c4bbaa;
+$STEILGUT_BEIGE_300_COLOR: rgb(196, 187, 170, 0.3);
+$STEILGUT_RED_COLOR: #af7977;
+
+// Create your own map
+$steilgut-colors: (
+  "steilgut-bg-color": #343434,
+  "steilgut-gold-color": #ebcb9a,
+  "steilgut-beige-color": #c4bbaa,
+  "steilgut-red-color": #af7977,
+);
+
+/* ORDER */
+$DESKTOP_ORDER_ROW_HEIGHT: 27%;

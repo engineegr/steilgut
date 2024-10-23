@@ -1,0 +1,504 @@
+/* Mixins definitions */
+@mixin transformScale($size: 1) {
+  transform: scale($size);
+  -ms-transform: scale($size);
+  -webkit-transform: scale($size);
+}
+
+@mixin item-title {
+  font-family: "steilgut_cormorant", sans-serif;
+  font-weight: 400;
+
+  font-size: 42px;
+  font-size: calc(1.5rem + 1.375vmin);
+
+  text-transform: uppercase;
+  max-width: fit-content;
+  width: fit-content;
+
+  margin-top: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 14px;
+    background: url("/images/icons/single-wine-pg/header-underscore-line.svg") center left/100% no-repeat;
+  }
+}
+
+@mixin text-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin dots-2line-string {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin top-relative-container {
+  position: relative;
+
+  @media only screen and (min-width: 320px) and (orientation: portrait) {
+    margin-top: -15vh;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    margin-top: -26vh;
+  }
+}
+
+/* Social icons */
+// based on https://css-tricks.com/add-background-colors-to-svgs-using-the-rect-element/
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .social-link {
+    margin-right: 0.875rem;
+  }
+
+  .social-link:last-child {
+    margin-right: auto;
+  }
+
+  .social-link-insta {
+    width: 20px;
+    height: 18px;
+  }
+
+  .social-link-vk {
+    width: 21px;
+    height: 13px;
+  }
+
+  .social-link-facebook {
+    width: 9px;
+    height: 18px;
+  }
+
+  .social-link-youtube {
+    width: 26px;
+    height: 18px;
+  }
+
+  .social-link::before {
+    background: transparent;
+    content: "";
+    display: block;
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    width: inherit;
+    z-index: -1;
+  }
+
+  .social-link-insta::before {
+    border-radius: 4px;
+  }
+
+  .social-link-youtube::before {
+    border-radius: 4px;
+  }
+
+  .social-link:hover::before,
+  .social-link:focus::before {
+    transform: scale(1.8, 1.8);
+    opacity: 1;
+  }
+
+  .social-link svg {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .social-link svg path {
+    fill: #fff;
+  }
+
+  .social-link-youtube svg path {
+    fill: #c4bbaa;
+  }
+
+  .social-link:hover svg,
+  .social-link:focus svg {
+    transform: scale(1.8, 1.8);
+    transform-origin: center;
+  }
+}
+
+/*
+ * Social-network icons black-to-white version 
+ * Pages: Basket, store
+ */
+.social-icons-black-to-white {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .social-link {
+    margin-right: 0.875rem;
+  }
+
+  .social-link:last-child {
+    margin-right: auto;
+  }
+
+  .social-link-insta {
+    width: 20px;
+    height: 18px;
+  }
+
+  .social-link-vk {
+    width: 21px;
+    height: 13px;
+  }
+
+  .social-link-facebook {
+    width: 9px;
+    height: 18px;
+  }
+
+  .social-link-youtube {
+    width: 26px;
+    height: 18px;
+  }
+
+  .social-link::before {
+    background: transparent;
+    content: "";
+    display: block;
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    width: inherit;
+    z-index: -1;
+  }
+
+  .social-link-insta::before {
+    border-radius: 4px;
+  }
+
+  .social-link-youtube::before {
+    border-radius: 4px;
+  }
+
+  .social-link:hover::before,
+  .social-link:focus::before {
+    background: transparent;
+    transform: scale(1.8, 1.8);
+    opacity: 1;
+  }
+
+  .social-link svg {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .social-link svg path {
+    fill: #000;
+  }
+
+  .social-link-youtube svg path {
+    fill: #c4bbaa;
+  }
+
+  .social-link:hover svg,
+  .social-link:focus svg {
+    transform: scale(1.8, 1.8);
+    transform-origin: center;
+  }
+}
+
+/* Stretch right right-arrow
+@link https://codepen.io/boylett/pen/yprEOL
+-------------------------------------
+*/
+div.right-arrow-container {
+  font-size: 10px;
+  text-align: center;
+  line-height: 100vh;
+  background-color: transparent;
+}
+a.right-arrow {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 43px;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: left;
+  text-decoration: none;
+  line-height: 3em;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+a.right-arrow svg {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+a.right-arrow svg g line,
+a.right-arrow svg g polyline,
+a.right-arrow svg g circle {
+  fill: none;
+  stroke: #fff;
+}
+
+a.right-arrow svg g line,
+a.right-arrow svg g polyline {
+  stroke-miterlimit: 20;
+}
+
+a.right-arrow svg g circle {
+  display: block;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.066em;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset ease-out 0.5s;
+  transition: stroke-dashoffset ease-out 0.5s;
+}
+
+a.right-arrow font {
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+}
+
+a.right-arrow:hover {
+  -webkit-transform: translateZ(0) translateX(0.5em);
+  transform: translateZ(0) translateX(0.5em);
+}
+
+a.right-arrow:hover svg g circle {
+  stroke-dashoffset: 200;
+}
+
+/* Stretch left right-arrow
+@link https://codepen.io/boylett/pen/yprEOL
+-------------------------------------
+*/
+div.left-arrow-container {
+  font-size: 10px;
+  text-align: center;
+  line-height: 100vh;
+  background-color: transparent;
+}
+a.left-arrow {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 43px;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: left;
+  text-decoration: none;
+  line-height: 3em;
+  font-size: 1rem;
+  color: #232528;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+a.left-arrow svg {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+a.left-arrow svg g line,
+a.left-arrow svg g polyline,
+a.left-arrow svg g circle {
+  fill: none;
+  stroke: #fff;
+}
+
+a.left-arrow svg g line,
+a.left-arrow svg g polyline {
+  stroke-miterlimit: 10;
+}
+
+a.left-arrow svg g circle {
+  display: block;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.066em;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset ease-out 0.5s;
+  transition: stroke-dashoffset ease-out 0.5s;
+}
+
+a.left-arrow font {
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+}
+
+a.left-arrow:hover {
+  -webkit-transform: translateZ(0) translateX(-0.5em);
+  transform: translateZ(0) translateX(-0.5em);
+}
+
+a.left-arrow:hover svg g circle {
+  stroke-dashoffset: 200;
+}
+
+/* Circle
+---------
+*/
+.control-nav svg g circle {
+  fill: none;
+  stroke: #232528;
+  display: block;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.066em;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset ease-out 0.5s;
+  transition: stroke-dashoffset ease-out 0.5s;
+}
+
+a.left-arrow:hover svg g circle {
+  stroke-dashoffset: 200;
+}
+
+/*
+* Spinner for loading: see DropDownDynListComp for usage
+*/
+.loader {
+  border-top-color: #b09a79 !important;
+  -webkit-animation: spinner 3s linear infinite !important;
+  animation: spinner 3s linear infinite !important;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.disabled-element {
+  opacity: 0.2;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.agreement-container {
+  margin: 1vh 0;
+}
+
+.agreement-container .agreement-checkbox-container {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto 1vmin auto 0;
+  /* aspect ratio: >= 16/10 */
+  width: 22px;
+  height: 22px;
+}
+
+/* Hide the browser's default checkbox */
+.agreement-container .agreement-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+/* Create a custom checkbox */
+.agreement-checkbox-container .checkmark {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.05rem solid #000;
+  background-color: transparent;
+  border-radius: 0.35vh;
+  height: 100%;
+  width: 100%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.agreement-checkbox-container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  top: -100%;
+  left: 0%;
+
+  width: 22px;
+  height: 33px;
+  border: 1px solid #767676;
+  filter: brightness(1.2);
+
+  border-width: 0 0.07rem 0.05rem 0;
+  transform: rotate(45deg) translate(0%, 0%);
+}
+
+/* Show the checkmark when checked */
+.agreement-checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* On mouse-over, add a grey background color */
+.agreement-container .agreement-checkbox-container:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Show the checkmark when checked */
+.agreement-container .agreement-checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}

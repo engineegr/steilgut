@@ -1,0 +1,631 @@
+/*********************************************************************
+*
+*************************** MEDIA QUERIES ****************************
+* @link 
+* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+**********************************************************************/
+
+/*
+    *
+    * ---------------------- Bootstrap 5 breakpoints ------------------- *
+    *
+*/
+
+/* XXLarge [1400 - ...) */
+@media screen and (min-width: 1400px) {
+}
+
+@media screen and (min-width: 1200px) {
+    .item-form {
+        form.wines-catalog-form {
+            .wines-catalog-item-content {
+                .lang-drop-down-list-container {
+                    max-width: 240px;
+
+                    .drop-down-box {
+                        .drop-down-box-header {
+                            .drop-down-header-text {
+                            }
+
+                            .drop-down-box-arrow-down {
+                            }
+                        }
+
+                        .drop-down-container {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* XLarge [1200 - 1400) */
+@media screen and (max-width: 1399px) {
+}
+
+/* Large [992 - 1200) */
+@media screen and (max-width: 1199px) {
+    .items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-navbar,
+        &-content {
+            max-width: 90%;
+            width: 90%;
+        }
+
+        &-navbar {
+            padding: 2%;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: "";
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+            }
+
+            &-title {
+                h1 {
+                    text-align: center;
+                }
+            }
+
+            &-list {
+                min-width: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin-bottom: 2%;
+
+                li {
+                    text-align: center;
+                }
+            }
+        }
+
+        &-content {
+            margin: auto 0;
+
+            &-active-category {
+                .news {
+                    &-line {
+                        justify-content: center;
+                        align-items: center;
+
+                        .news-item {
+                            &-header-block {
+                                &-img {
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wines {
+                    &-branches {
+                        width: 90%;
+                    }
+
+                    &-catalog-list {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .item-form {
+        .news-catalog-form {
+            &-content {
+            }
+        }
+    }
+}
+
+/* Medium [768 - 991) */
+@media screen and (max-width: 991px) {
+    body {
+        height: auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        min-height: 100%;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        height: auto;
+        position: static;
+        top: 0;
+        left: 0;
+
+        /* Disable zoom */
+        touch-action: manipulation;
+    }
+
+    #cms-app {
+        overflow: hidden;
+    }
+
+    .cms-header,
+    .cms-footer {
+        flex: 0 0 10vh;
+        min-height: 42px;
+    }
+
+    .cms-header {
+        .navbar-collapse {
+            .navbar-nav {
+                .dropdown {
+                    max-width: 160px;
+                    min-width: 30vw;
+
+                    &-menu {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .item-form {
+        .news-catalog-form {
+            &-content {
+                &-primary-field-list {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .upload-box,
+                    .upload-box-content {
+                    }
+
+                    .upload-box {
+                    }
+
+                    .upload-box-img {
+                    }
+
+                    .upload-box-content {
+                    }
+
+                    &-text-field-list {
+                        .lang-drop-down-list-container {
+                        }
+
+                        .text-field-box {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+
+                        .text-fields > input {
+                        }
+                    }
+                }
+            }
+        }
+
+        form.wines-catalog-form {
+            .wines-catalog-item-content {
+                .lang-drop-down-list-container {
+                    width: 25vw;
+                    min-width: 178px;
+
+                    .drop-down-box {
+                        .drop-down-box-header {
+                            .drop-down-header-text {
+                            }
+
+                            .drop-down-box-arrow-down {
+                            }
+                        }
+
+                        .drop-down-container {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .items {
+        &-content {
+            &-common-control {
+            }
+
+            &-active-category {
+                .news {
+                    &-line {
+                        .news-item {
+                            max-width: 90%;
+                        }
+                    }
+                }
+
+                .wines {
+                    .row {
+                        .wines-item {
+                            &-header-block {
+                                .wines-item-info {
+                                    h1,
+                                    h2 {
+                                        @include text-wrapper;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 896px) {
+    .items {
+        &-content {
+            &-active-category {
+                .wines {
+                    .card-img-top {
+                        object-fit: scale-down;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small [576 - 767) */
+@media screen and (max-width: 767px) {
+    .sm-hidden {
+        display: none;
+    }
+
+    .sm-visible {
+        display: flex;
+    }
+
+    .items {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+
+        &-dropdown {
+            margin-right: 5vw;
+            margin-left: auto;
+            &-title {
+                font-size: calc(1rem + 1vh);
+                margin: auto auto 2% auto;
+                color: $STEILGUT_GOLD_COLOR;
+            }
+
+            &-item {
+                font-size: calc(0.7rem + 0.7vh);
+                transition: 1.5s all ease-out;
+
+                &-active,
+                &:hover {
+                    background-color: $STEILGUT_BEIGE_300_COLOR;
+                    color: $STEILGUT_RED_COLOR;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &-content {
+            &-common-control {
+            }
+
+            &-active-category {
+                .news {
+                    &-link-ctrl {
+                        margin: 2vh auto;
+                    }
+
+                    &-line {
+                        flex-direction: column;
+
+                        .news-item {
+                            margin-top: 4vh;
+
+                            &-header-block {
+                                .news-item-img {
+                                    min-height: 320px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wines {
+                    .row {
+                        flex-direction: column;
+                        align-items: center;
+
+                        .wines-item {
+                            margin: 6vh auto;
+
+                            &-header-block {
+                                .wines-item-info {
+                                    .wines-item-img {
+                                        min-height: 320px;
+                                    }
+
+                                    h1,
+                                    h2 {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            .wines-control {
+                                max-width: 270px;
+                                width: 270px;
+                                min-width: 0;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+
+                    &-link-ctrl {
+                        margin: 2vh auto;
+                    }
+
+                    &-branches {
+                        flex-direction: column;
+                        align-items: center;
+
+                        .wines-item-card {
+                            margin: 2vh auto;
+
+                            img.card-img-top {
+                                object-fit: scale-down;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .item-form {
+        .news-catalog-form {
+            &-content {
+                &-primary-field-list {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+
+        form.wines-catalog-form {
+            .wines-catalog-item-content {
+                &-row {
+                    .wine-item-title-input {
+                        width: 30vw;
+                    }
+
+                    .wine-property-col-container {
+                        margin-top: 2vh;
+                        padding: 0 5vw;
+                    }
+
+                    .bottle-img {
+                        margin: 0 auto;
+                    }
+
+                    .wine-item-title {
+                        &-input {
+                            font-size: calc(1.5rem + 1.375vmin);
+                        }
+                    }
+
+                    input.wine-item-type-input,
+                    h2.wine-item-type-text {
+                        font-size: 24px;
+                    }
+
+                    input.wine-item-type-input {
+                    }
+
+                    .price-cart-container,
+                    .price-count-container {
+                        .price-text,
+                        .count-text {
+                            font-size: 32px;
+                        }
+
+                        h2.count-text {
+                            margin-top: 1rem;
+                        }
+
+                        h3.price-note-text,
+                        h3.count-note-text {
+                            font-size: 12px;
+                        }
+
+                        .edit-container {
+                            width: 160px;
+
+                            input.price-text,
+                            input.count-text {
+                                width: 90px;
+                            }
+
+                            input.count-text {
+                            }
+
+                            h3.price-note-text,
+                            h3.count-note-text {
+                            }
+                        }
+
+                        .cart-container {
+                            h3.price-cart-text {
+                                font-size: 15px;
+                            }
+
+                            .add-to-cart-bg-icon-container {
+                                .add-to-cart-bg-icon {
+                                }
+                            }
+                        }
+                    }
+
+                    .wine-property-table-container {
+                        & .row .wine-property-col {
+                            h2.property-1st-row-value-text,
+                            input.property-1st-row-value-text {
+                                font-size: 26px;
+                                font-size: calc(1.25rem + 1vmin);
+                            }
+
+                            h2.property-2nd-row-value-text,
+                            input.property-1st-row-value-text {
+                                font-size: 20px;
+                                font-size: calc(1.25rem + 1vmin);
+                            }
+
+                            h3.property-header-text {
+                                font-size: 14px;
+                                font-size: calc(0.9rem + 0.9vmin);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* X-Small */
+@media screen and (max-width: 576px) {
+    .item-form {
+        form.wines-catalog-form {
+            .wines-catalog-item-content {
+                &-row {
+                    .wine-item-title-input {
+                        width: 30vw;
+                    }
+
+                    .wine-property-col-container {
+                        margin-top: 2vh;
+                        padding: 0 5vw;
+                    }
+
+                    .bottle-img {
+                        margin: 0 auto;
+                    }
+
+                    .wine-item-title {
+                        &-input {
+                            font-size: calc(1.5rem + 1.375vmin);
+                        }
+                    }
+
+                    input.wine-item-type-input,
+                    h2.wine-item-type-text {
+                        font-size: 24px;
+                    }
+
+                    input.wine-item-type-input {
+                    }
+
+                    .price-cart-container,
+                    .price-count-container {
+                        .price-text,
+                        .count-text {
+                            font-size: 32px;
+                        }
+
+                        h2.count-text {
+                            margin-top: 1rem;
+                        }
+
+                        .edit-container {
+                            width: 98px;
+
+                            input.price-text,
+                            input.count-text {
+                                width: 80px;
+                                font-size: calc(0.9rem + 0.9vmin);
+                            }
+
+                            span.price-text,
+                            span.count-text {
+                                font-size: calc(0.8rem + 0.8vmin);
+                            }
+                        }
+
+                        h3.price-note-text,
+                        h3.count-note-text {
+                            font-size: calc(0.7rem + 0.7vmin);
+                        }
+
+                        .cart-container {
+                            h3.price-cart-text {
+                                font-size: 15px;
+                            }
+
+                            .add-to-cart-bg-icon-container {
+                                .add-to-cart-bg-icon {
+                                }
+                            }
+                        }
+                    }
+
+                    .wine-property-table-container {
+                        .sm-hidden {
+                            display: none;
+                        }
+
+                        .sm-visible {
+                            display: flex;
+                        }
+
+                        & .row .wine-property-col {
+                            h2.property-1st-row-value-text,
+                            input.property-1st-row-value-text {
+                                font-size: 26px;
+                                font-size: calc(1.25rem + 1vmin);
+                            }
+
+                            h2.property-2nd-row-value-text,
+                            input.property-1st-row-value-text {
+                                font-size: 20px;
+                                font-size: calc(1.25rem + 1vmin);
+                            }
+
+                            h3.property-header-text {
+                                font-size: 14px;
+                                font-size: calc(0.9rem + 0.9vmin);
+                            }
+                        }
+
+                        & .row .sm-hidden {
+                            display: none;
+                        }
+
+                        & .row:nth-child(2) {
+                            margin-bottom: 27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

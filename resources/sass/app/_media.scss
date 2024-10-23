@@ -1,0 +1,270 @@
+/*********************************************************************
+*
+*************************** MEDIA QUERIES ****************************
+* @link 
+* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+**********************************************************************/
+
+/*
+    * @link: https://websiteedu.com/media-queries-for-mobile-and-tablets/?__cf_chl_jschl_tk__=f4b85448ac9131968259f036667ebbe13f3aee4e-1620873849-0-AfVyBOo3EXzkNnPk3o7Y2fBiOHMOfi9Ez_ELD5YtZPhiuNEWff8cy4MUte33zch82L-l8ED6GNcOpaSmkrLTf-MBeOtEwaD0lOUn3JpenolXersHBNrzqH1P2EriQDQ0T3zRwahK5L0Dv1HaV6FtQjSWLbpUA3dzW6f9QfGllFDKoFKyFoeR7ma8DzneAa8_lg_P4uZKkDeDNYNeu4N5ZPGU8bYgv7OSYrlY17sKUZYScM5cG5IWZdKKED70KvynQtzyL22ETSPnUUSdew9gTFo3xTQhiOjCO-h79BHYAl9u9yUtrVPzZ1vXPuL3d8DXGM_Dw7rSMbTARgqzMPirmWcZZnYgYI_Ad_puGDQEky3Mg4ma4ltgGVG__BKE_JGL1Th8dKZhG3-48KTSJNAwh_vX0x3SCvVckdjUkcc4yQ0fkkTUeEy55KZ76yiqO35_PVGoQGj4yBIYAe84TKs8hdVDH7LqZuz_8MfLbzsyRExG0ri6AZhSfs999AwnI72B0g
+    *
+    * @link https://viewportsizer.com/devices/
+    *
+    * Samsung 
+    * S8,8+,9,9+,10: W360px - H740px 4x
+    * Galaxy S6, S7, S7 Edge: W360px - H640px 4x
+    * Galaxy S4, S5, Note 3: W360px - H640px 3x
+    * Galaxy Note 10, 10+: W360px - H718px 2x
+    * Galaxy Note 8, 9: W360px - H740px 4x
+    * Galaxy S20 Ultra, S20+, S20: W480 - H1067 3x-4x
+    *
+    * Iphone
+    * iPhone 5, 5C, 5S, SE: W320px - H568px 2x
+    * iPhone 6 Plus, 6S Plus, 7 Plus, 8 Plus: W414px - H736px 3x
+    * iPhone 6, 6S, 7, 8: W375px - H667px 2x
+    * iPhone XR, 11: W414px - H896px 2x
+    * iPhone XS Max, 11 Pro Max: 414px - 896px 3x
+    * iPhone X, XS, 11 Pro: 375px -  812px 3x
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    html,
+    body {
+        min-height: 100%;
+        min-height: 100vh;
+        min-height: calc(var(--100vh, 1vh) * 100);
+    }
+
+    body {
+        height: auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        height: auto;
+        position: static;
+        top: 0;
+        left: 0;
+
+        /* Disable zoom */
+        touch-action: manipulation;
+    }
+
+    #app {
+        display: flex;
+        flex: 1 0 100%;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        min-height: 100vh;
+        min-height: calc(var(--100vh, 1vh) * 100);
+
+        overflow: hidden;
+    }
+
+    .input-cell > label {
+        font-size: calc(0.5em + 0.6vh);
+    }
+
+    .input-cell > input {
+        padding: 0.5vh 0;
+        font-size: calc(0.6em + 0.8vh);
+    }
+
+    .number-text {
+        font-size: 29px;
+        font-size: calc(0.7em + 1vmin);
+        font-size: calc(0.7em + var(--100vmin, 1vmin));
+    }
+
+    /* Mobile menu */
+    .mobile-menu-bg {
+        width: 100vw;
+        max-width: 100vw;
+
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    .is_full_screen_width {
+        width: 100%;
+        width: 100vw;
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+            body {
+                overflow: hidden;
+                min-height: -webkit-fill-available;
+            }
+
+            .input-cell > label {
+                font-size: calc(0.5em + 0.6vh);
+                font-size: calc(0.5em + var(--100vh, 1vh) * 0.6);
+            }
+
+            .input-cell > input {
+                padding: 0.5vh 0;
+                padding: calc(var(--100vh, 1vh) * 0.5) 0;
+                font-size: calc(0.6em + 0.8vh);
+                font-size: calc(0.6em + var(--100vh, 1vh) * 0.8);
+            }
+
+            #app {
+                min-height: calc(var(--100vh, 1vh) * 100);
+                height: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (orientation: portrait) {
+    #app {
+        height: auto;
+    }
+
+    /* Mobile menu image */
+    .mobile-menu-bg {
+        width: 100vw;
+        max-width: 100vw;
+
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    .agreement-container .agreement-checkbox-container {
+        width: 22px;
+        height: 22px;
+        margin: auto 0;
+        top: 50%;
+        // transform: translate(0, -50%);
+    }
+
+    .agreement-container .agreement-text {
+        font-size: 2vh;
+        margin-left: 3vw;
+        max-width: 80%;
+        white-space: unset;
+    }
+
+    .selected-payment-board .agreement-checkbox-container .checkmark::after {
+        left: 10%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    .lqip-left-bg-wines-16_9-img {
+        width: 56vw;
+        width: calc(var(--100vw, 1vw) * 56);
+        min-width: 56vw;
+        min-width: calc(var(--100vw, 1vw) * 56);
+    }
+
+    .left-bg-wines-16_9-img {
+        max-width: 51vw;
+        max-width: calc(var(--100vw, 1vw) * 51);
+        width: 51vw;
+        width: calc(var(--100vw, 1vw) * 51);
+    }
+
+    .lqip-right-bg-wines-16_9-img {
+        width: 55.4688vw;
+        width: calc(var(--100vw, 1vw) * 55.4688);
+    }
+
+    .right-bg-wines-16_9-img {
+        width: 55.5729vw;
+        width: calc(var(--100vw, 1vw) * 55.5729);
+    }
+
+    .lqip-4_3-img {
+    }
+
+    .lqip-left-bg-wines-4_3-img {
+        width: 56vw;
+        width: calc(var(--100vw, 1vw) * 56);
+    }
+
+    .lqip-right-bg-wines-4_3-img {
+        width: 57.292vw;
+        width: calc(var(--100vw, 1vw) * 57.292);
+    }
+
+    .left-bg-wines-4_3-img {
+        max-width: 51vw;
+        max-width: calc(var(--100vw, 1vw) * 51);
+        width: 51vw;
+        width: calc(var(--100vw, 1vw) * 51);
+    }
+
+    .right-bg-wines-4_3-img {
+        width: 57.153vw;
+        width: calc(var(--100vw, 1vw) * 57.153);
+    }
+
+    .agreement-checkbox-container {
+        display: inline-flex;
+        margin: auto 1vw auto 0;
+        /* aspect ratio: >= 16/10 */
+        height: 15px;
+        width: 15px;
+    }
+
+    .agreement-checkbox-container .checkmark::after {
+        width: 30px;
+        height: 15px;
+        left: -100%;
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+        }
+    }
+}
+
+/* Laptops, desktops, large screens ----------- */
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
+    body {
+        overflow: auto;
+    }
+
+    .is-content-height-minimum {
+        min-height: 80%;
+        min-height: 80vh;
+        min-height: calc(var(--100nvh, 1vh) * 80);
+    }
+
+    .is-content-width-minimum {
+        min-width: 100%;
+        min-width: 100vw;
+        min-width: calc(var(--100nvw, 1vw) * 100);
+    }
+
+    .is_full_screen_width {
+        width: 100%;
+        // width: 100vw;
+        // width: calc(var(--100nvw, 1vw) * 100);
+    }
+
+    /* Used in LegalComp to control height in the desktop version */
+    .safari-legal-height {
+        max-height: 100% !important;
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+            .safari-legal-height {
+                height: 75vh !important;
+                max-height: 75vh !important;
+
+                height: calc(var(--100nvh, 1vh) * 75) !important;
+                max-height: calc(var(--100nvh, 1vh) * 75) !important;
+            }
+        }
+    }
+}

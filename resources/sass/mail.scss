@@ -1,0 +1,677 @@
+@import "variables";
+@import "base";
+@import "components";
+
+html,
+body {
+    display: flex !important;
+    overflow-y: auto !important;
+}
+
+body {
+    background-color: #ededed !important;
+}
+
+img {
+    border: 0;
+}
+
+/*
+* It is used for store, basket pages
+*/
+.light-bg {
+    background-color: #eeeeee !important;
+}
+
+/*
+* It is used for all pages excluding store, basket pages
+*/
+.dark-bg {
+    background-color: #313131 !important;
+}
+
+/*
+* Show a message in the center of a display
+*/
+.centered-msg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 20;
+    margin: 0;
+}
+
+.centered {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.disabled-element {
+    opacity: 0.2;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+/*
+* A flex box inherited full height and width of a parent 
+*/
+
+.transit-flex-box {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+}
+
+.minus-z-1 {
+    z-index: -1;
+}
+
+[v-cloak],
+spinner {
+    display: block;
+    padding: 50px 0;
+
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        border-top-color: #333;
+        animation: spinner 0.6s linear infinite;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    & > div {
+        display: none;
+    }
+}
+.bg-filter {
+    /*
+         * https://www.cssmatic.com/box-shadow
+         * https://css-tricks.com/almanac/properties/b/box-shadow/#example
+         */
+    -webkit-box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+}
+
+.light-bg-shadow-filter {
+    background-image: url("/images/orig/header/shadows/mobile/portrait/light-menu-shadow.svg");
+    background-size: 100%;
+    opacity: 0.9;
+}
+
+/*
+* Transitions (this classes are used on a Wine Catalog page (url: /masthead/wines))
+*/
+.fade-inOut-zindex-opacity-img {
+    transition-property: opacity, z-index;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.fade-inOut-opacity {
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.fade-inOut-opacity-display {
+    transition-property: opacity, display;
+    transition-duration: 1.5s;
+    transition-delay: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.fade-filter-img {
+    transition-property: filter;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.vfade-enter-active, .vfade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+    transition: opacity 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.smooth-width-change {
+    transition-property: width;
+    transition-duration: 1.5s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-fade-enter-active {
+    animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.img-fade-enter-active {
+    animation: img-fade-in 1s;
+}
+
+@keyframes img-fade-in {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(2);
+        /* transform: translate(-50%, -50%); */
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/*
+* =========================== MAIL ===========================
+*/
+
+div.card {
+    background-color: transparent !important;
+    border-color: #c4bbaa !important;
+}
+
+.mail-contatiner {
+    min-height: 100%;
+    flex: 1 0 100%;
+}
+
+.wine-order-content-container {
+    padding: 2vh;
+}
+
+.mail-logo {
+    display: block;
+    max-width: 15%;
+    margin: 0 auto auto 0;
+}
+
+/* Wine Order Report */
+.wine-order-header,
+.wine-order-main,
+.wine-order-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 67.3125%;
+    width: 67.3125%;
+    margin: auto 3vw auto auto;
+    border-bottom: 1px solid #ebcb9a;
+    padding: 2vh 0;
+}
+
+.wine-order-header {
+    flex: 0 0 10%;
+}
+
+.wine-order-main {
+    flex: 1 0 auto;
+    padding: 2vh 0;
+
+    header.wine-order-table-header {
+        display: block;
+        align-self: flex-end;
+        justify-self: flex-end;
+
+        padding: 2vh 0.5vmin 2vh 0;
+    }
+
+    header.wine-order-table-header h2 {
+        display: inline-block;
+
+        font-family: "steilgut_opensans";
+        font-weight: lighter;
+        font-size: calc(0.7em + 0.3vh);
+        font-style: italic;
+
+        color: #000;
+    }
+}
+
+.wine-order-main .wine-row-container header.wine-row {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.wine-order-main .wine-row-container header.wine-row .wine-header {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+}
+
+.wine-order-main .wine-row-container {
+    header.wine-row {
+        div.wine-header {
+            max-width: 20%;
+            margin: auto 3vw;
+            text-align: center;
+            div.wine-img-container {
+                margin: 0.5vh auto;
+                display: block;
+                height: 20vh;
+                img.wine-order-bottle-img {
+                    display: block;
+                    max-height: 20vh;
+                }
+            }
+        }
+
+        div.wine-tail {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: row;
+
+            .row-dots {
+                flex: 1 0 auto;
+                border-bottom: 2px dotted #ccc;
+            }
+
+            div.tail-summary {
+                display: block;
+                padding-right: 0.5vmin;
+
+                h2 {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    article.wine-article {
+        padding: 2vh 0.5vw;
+
+        font-family: "steilgut_opensans";
+        font-weight: lighter;
+        font-size: calc(0.7em + 0.3vh);
+        font-style: italic;
+
+        color: #000;
+    }
+}
+
+.wine-order-footer {
+    flex: 1 0 5%;
+    min-height: 5%;
+
+    h1 {
+        font-family: "steilgut_opensans";
+        font-weight: lighter;
+        color: #000;
+        font-size: 1em;
+        font-size: calc(0.8em + 0.6vmin);
+    }
+}
+
+.wine-order-header {
+    h1,
+    .order-number {
+        font-family: "steilgut_opensans";
+        font-weight: normal;
+        color: #000;
+        font-size: 1em;
+        font-size: calc(0.8em + 0.6vmin);
+        margin: auto;
+
+        text-transform: uppercase;
+    }
+
+    .order-number {
+        font-style: italic;
+    }
+}
+
+/* END: Wine Order Report */
+
+/*
+* ====================== END:MAIL ===============================
+*/
+
+/*********************************************************************
+*
+*************************** MEDIA QUERIES ****************************
+* @link 
+* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+**********************************************************************/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 896px) {
+}
+
+@media only screen and (min-width: 320px) and (orientation: portrait) {
+}
+
+@media only screen and (min-width: 321px) and (max-width: 896px) and (orientation: landscape) {
+}
+
+@media only screen and (min-width: 897px) and (max-device-width: 3840) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* Laptops, desktops, large screens: [... 16/10) ----------- */
+@media only screen and (min-width: 897px) and (max-device-width: 2048px) and (-webkit-min-device-pixel-ratio: 1) and (max-aspect-ratio: 159/100) {
+    /* Styles */
+}
+
+/* Laptops, desktops, large screens: [16/10 ...] ----------- */
+@media only screen and (min-width: 897px) and (max-device-width: 3840px) and (-webkit-min-device-pixel-ratio: 1) and (min-aspect-ratio: 16/10) {
+    /* Styles */
+}
+
+/* ----------- Retina Screens (Apple Mac Book Pro): link https://support.apple.com/en-us/HT202471 ----------- */
+@media screen and (min-device-width: 2560px) and (max-device-width: 3072px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-aspect-ratio: 16/10) {
+}
+
+/* ----------- Retina Screens (iMac Pro): link https://support.apple.com/en-us/HT202471 ----------- */
+@media screen and (min-device-width: 4096px) and (max-device-width: 5120px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-aspect-ratio: 1777/1000) {
+}
+
+/* Safari only */
+@media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+    @supports (-webkit-appearance: none) {
+    }
+}
+
+/* 
+    *
+    * ---------------------- iPhones ------------------- *
+    *
+*/
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
+}
+
+/* ----------- Apple Watch ----------- */
+@media (max-device-width: 42mm) and (min-device-width: 38mm) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
+}
+
+/* 
+    *
+    * ---------------------- Samsung ------------------- *
+    *
+*/
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+}
+
+/* 
+    *
+    * ---------------------- Google Pixels ------------------- *
+    *
+*/
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+}
+
+/* 
+    *
+    * ---------------------- Windows Phone ------------------- *
+    *
+*/
+
+/* Portrait and Landscape */
+@media screen and (device-width: 480px) and (device-height: 800px) {
+}
+
+/* Portrait */
+@media screen and (device-width: 480px) and (device-height: 800px) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 480px) and (device-height: 800px) and (orientation: landscape) {
+}

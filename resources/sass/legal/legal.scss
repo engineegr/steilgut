@@ -1,0 +1,174 @@
+ol {
+    list-style: decimal inside;
+}
+
+p ul.legal-ul {
+    list-style: "-" outside;
+    padding-left: 1.5rem;
+    padding-left: calc(0.7rem + 1vmin);
+    padding-left: calc(0.7rem + var(--100nvmin, 1vmin));
+}
+
+p ul.legal-ul li {
+    padding-left: 1rem;
+    padding-left: calc(0.3rem + 1vmin);
+    padding-left: calc(0.3rem + var(--100nvmin, 1vmin));
+}
+
+.legal-header,
+.legal-num-header {
+    margin: 0.67em auto;
+    margin: calc(0.4rem + 1vmin) auto calc(0.4rem + 0.7vmin) auto;
+    margin: calc(0.4rem + var(--100nvmin, 1vmin)) auto calc(0.4rem + var(--100nvmin, 1vmin) * 0.7) auto;
+}
+
+li.legal-numeric-paragraph {
+    margin: 0.5rem auto;
+    margin: calc(0.3rem + 0.8vmin) auto calc(0.3rem + 0.5vmin) auto;
+    margin: calc(0.3rem + var(--100nvmin, 1vmin) * 0.8) auto calc(0.3rem + var(--100nvmin, 1vmin) * 0.5) auto;
+    font-size: 1.7rem;
+    font-size: calc(1rem + 1.1vmin);
+    font-size: calc(1rem + var(--100nvmin, 1vmin) * 1.1);
+    font-weight: lighter;
+}
+
+h2.legal-num-header {
+    margin: 0.3rem auto;
+    margin: calc(0.2rem + 0.6vmin) auto calc(0.4rem + 0.5vmin) auto;
+    margin: calc(0.2rem + var(--100nvmin, 1vmin) * 0.6) auto calc(0.4rem + var(--100nvmin, 1vmin) * 0.5) auto;
+}
+
+section.legal-paragraph {
+    font-family: "steilgut_opensans";
+    font-weight: lighter;
+    color: #ffffff;
+    font-size: 1rem;
+    font-size: calc(0.63em + 0.7vmin);
+    font-size: calc(0.63em + var(--100nvmin, 1vmin) * 0.7);
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    line-height: calc(0.95em + 1vmin);
+    line-height: calc(0.95em + var(--100nvmin, 1vmin));
+    margin-bottom: calc(0.7rem + 0.7vmin);
+    margin-bottom: calc(0.7rem + var(--100nvmin, 1vmin) * 0.7);
+}
+
+section.legal-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+h2.legal-subheader {
+    font-family: "steilgut_cormorant";
+    font-size: 1.375em;
+    font-size: calc(0.9rem + 1vmin);
+    font-size: calc(0.9rem + var(--100nvmin, 1vmin));
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0;
+}
+
+h3.legal-subsubheader {
+    margin: calc(0.7rem + 0.7vmin) 0;
+    margin: calc(0.7rem + var(--100nvmin, 1vmin) * 0.7) 0;
+}
+
+/*********************************************************************
+*
+*************************** MEDIA QUERIES ****************************
+* @link 
+* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+**********************************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    /* remove rounding corners */
+    textarea,
+    input[type="text"],
+    input[type="button"],
+    input[type="submit"] {
+        -webkit-appearance: none !important;
+        border-radius: 0 !important;
+    }
+
+    p ul.legal-ul {
+        list-style: "-" outside;
+        padding-left: 1.5rem;
+        padding-left: calc(0.7rem + 1vmin);
+    }
+
+    p ul.legal-ul li {
+        padding-left: 1rem;
+        padding-left: calc(0.3rem + 1vmin);
+    }
+
+    .legal-header,
+    .legal-num-header {
+        margin: 0.67em auto;
+        margin: calc(0.4rem + 1vmin) auto calc(0.4rem + 0.7vmin) auto;
+    }
+
+    li.legal-numeric-paragraph {
+        margin: 0.5rem auto;
+        margin: calc(0.3rem + 0.8vmin) auto calc(0.3rem + 0.5vmin) auto;
+        font-size: 1.7rem;
+        font-size: calc(1rem + 1.1vmin);
+        font-weight: lighter;
+    }
+
+    h2.legal-num-header {
+        margin: 0.3rem auto;
+        margin: calc(0.2rem + 0.6vmin) auto calc(0.4rem + 0.5vmin) auto;
+    }
+
+    section.legal-paragraph {
+        font-family: "steilgut_opensans";
+        font-weight: lighter;
+        color: #ffffff;
+        font-size: 1rem;
+        font-size: calc(0.63em + 0.7vmin);
+        letter-spacing: 0;
+        line-height: 1.5rem;
+        line-height: calc(0.95em + 1vmin);
+        margin-bottom: calc(0.7rem + 0.7vmin);
+    }
+}
+
+@media only screen and (min-width: 320px) and (orientation: portrait) {
+    h1.legal-header {
+        font-size: 1.7rem;
+        font-size: calc(1rem + 1.5vmin);
+    }
+}
+
+/*
+    * @link: https://websiteedu.com/media-queries-for-mobile-and-tablets/?__cf_chl_jschl_tk__=f4b85448ac9131968259f036667ebbe13f3aee4e-1620873849-0-AfVyBOo3EXzkNnPk3o7Y2fBiOHMOfi9Ez_ELD5YtZPhiuNEWff8cy4MUte33zch82L-l8ED6GNcOpaSmkrLTf-MBeOtEwaD0lOUn3JpenolXersHBNrzqH1P2EriQDQ0T3zRwahK5L0Dv1HaV6FtQjSWLbpUA3dzW6f9QfGllFDKoFKyFoeR7ma8DzneAa8_lg_P4uZKkDeDNYNeu4N5ZPGU8bYgv7OSYrlY17sKUZYScM5cG5IWZdKKED70KvynQtzyL22ETSPnUUSdew9gTFo3xTQhiOjCO-h79BHYAl9u9yUtrVPzZ1vXPuL3d8DXGM_Dw7rSMbTARgqzMPirmWcZZnYgYI_Ad_puGDQEky3Mg4ma4ltgGVG__BKE_JGL1Th8dKZhG3-48KTSJNAwh_vX0x3SCvVckdjUkcc4yQ0fkkTUeEy55KZ76yiqO35_PVGoQGj4yBIYAe84TKs8hdVDH7LqZuz_8MfLbzsyRExG0ri6AZhSfs999AwnI72B0g
+    *
+    * @link https://viewportsizer.com/devices/
+    *
+    * Samsung 
+    * S8,8+,9,9+,10: W360px - H740px 4x
+    * Galaxy S6, S7, S7 Edge: W360px - H640px 4x
+    * Galaxy S4, S5, Note 3: W360px - H640px 3x
+    * Galaxy Note 10, 10+: W360px - H718px 2x
+    * Galaxy Note 8, 9: W360px - H740px 4x
+    * Galaxy S20 Ultra, S20+, S20: W480 - H1067 3x-4x
+    *
+    * Iphone
+    * iPhone 5, 5C, 5S, SE: W320px - H568px 2x
+    * iPhone 6 Plus, 6S Plus, 7 Plus, 8 Plus: W414px - H736px 3x
+    * iPhone 6, 6S, 7, 8: W375px - H667px 2x
+    * iPhone XR, 11: W414px - H896px 2x
+    * iPhone XS Max, 11 Pro Max: 414px - 896px 3x
+    * iPhone X, XS, 11 Pro: 375px -  812px 3x
+*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    h1.legal-header {
+        font-size: calc(0.9rem + 3vmin);
+        margin: 0 auto 1vmin auto;
+    }
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+        }
+    }
+}

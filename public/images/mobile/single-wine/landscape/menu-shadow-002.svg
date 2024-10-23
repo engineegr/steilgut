@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="896px" height="80px" viewBox="0 0 896 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>menu-shadow</title>
+    <defs>
+        <linearGradient x1="50%" y1="63.9683494%" x2="50%" y2="-12.8565705%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu-shadow" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <rect id="Rectangle" x="0" y="0" width="896" height="80"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+//
+// Font Cormorant
+//
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/Bold/Cormorant-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/SemiBold/Cormorant-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/SemiBold/Cormorant-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/BoldItalic/Cormorant-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/BoldItalic/Cormorant-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/Light/Cormorant-Light.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/LightItalic/Cormorant-LightItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/Medium/Cormorant-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/MediumItalic/Cormorant-MediumItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_cormorant;
+    src: url("../fonts/fontCormorant/Regular/Cormorant-Regular.ttf") format("truetype");
+    // font-weight: normal;
+    font-style: normal;
+}
+//
+// END Font Cormorant
+//
+
+//
+// Font OpenSans
+//
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/Bold/OpenSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/SemiBold/OpenSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/SemiBold/OpenSans-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/BoldItalic/OpenSans-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/BoldItalic/OpenSans-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/Light/OpenSans-Light.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/LightItalic/OpenSans-LightItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/Medium/OpenSans-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/MediumItalic/OpenSans-MediumItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: steilgut_opensans;
+    src: url("../fonts/fontOpenSans/Regular/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+//
+// END Font OpenSans
+//

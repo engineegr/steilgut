@@ -1,0 +1,1139 @@
+.page-body {
+    max-height: 80%;
+    max-height: 80vh;
+    max-height: calc(var(--100nvh, 1vh) * 80);
+    height: 80%;
+    height: 80vh;
+    height: calc(var(--100nvh, 1vh) * 80);
+}
+
+.page-form {
+    display: flex;
+    flex: 0 1 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    max-width: 62.7344vw;
+    max-width: calc(var(--100nvw, 1vw) * 62.7344);
+    width: 62.7344vw;
+    width: calc(var(--100nvw, 1vw) * 62.7344);
+
+    max-height: 100%;
+
+    margin: calc(0.2rem + 0.5vh) 0 calc(0.2rem + 0.5vh) auto;
+    margin: calc(0.2rem + var(--100nvh, 0.5vh)) 0 calc(0.2rem + var(--100nvh, 0.5vh)) auto;
+
+    // position: relative;
+    z-index: 2;
+}
+
+.header {
+    max-width: min-content;
+}
+
+.header h1.header-text {
+    color: #ffffff;
+    font-size: calc(0.7rem + 2.3vh);
+    font-size: calc(0.7rem + var(--100nvh, 1vh) * 2.3);
+    margin: calc(0.1rem + 0.3vh) 0;
+    margin: calc(0.1rem + var(--100nvh, 1vh) * 0.3) 0;
+}
+
+.header .header-underline-img {
+    width: 80%;
+    height: 1.75vh;
+    height: calc(var(--100nvh, 1vh) * 1.75);
+}
+
+.page-form h2.subheader {
+    font-weight: lighter;
+    font-family: "steilgut_cormorant", sans-serif;
+
+    margin: 0 0 2vh 0;
+    margin: 0 0 calc(var(--100nvh, 1vh) * 2) 0;
+    font-size: 1.375rem;
+    text-transform: uppercase;
+}
+
+section.content-paragraph h2.content-subheader {
+    font-family: "steilgut_cormorant";
+    font-size: 1.375rem;
+    font-size: calc(0.9rem + 1vmin);
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0;
+
+    margin: 0 0 calc(0.2rem + 0.5vh) 0;
+    margin: 0 0 calc(0.2rem + var(--100nvh, 0.5vh)) 0;
+}
+
+section.content-paragraph {
+    margin: calc(0.5rem + 1vh) 0;
+    margin: calc(0.5rem + var(--100nvh, 1vh) * 1) 0;
+
+    max-width: 95%;
+    width: 95%;
+}
+
+.content-text {
+    font-family: "steilgut_opensans";
+    font-weight: lighter;
+    font-size: calc(0.3rem + 1vh);
+    font-size: calc(0.3rem + var(--100nvh, 1vh) * 1);
+
+    line-height: 28px;
+    line-height: calc(1rem + var(--100nvh, 1vh));
+}
+
+.quote {
+    font-style: italic;
+    font-size: calc(0.3rem + 1.1vh);
+    font-size: calc(0.3rem + var(--100nvh, 1vh) * 1.1);
+}
+
+.option-panel {
+    display: flex;
+    flex: 1 0 auto;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    max-height: 60%;
+    // border: 2px solid #ebcb9a;
+
+    margin: 2vh 0;
+    margin: calc(var(--100nvh, 1vh) * 2) 0;
+}
+
+.option-panel .button-panel {
+    margin: calc(0.5rem + 0.5vh) 0;
+    margin: calc(0.5rem + var(--100nvh, 0.5vh)) 0;
+}
+
+.option-panel button.option-btn {
+    width: min(9.541667vw, 150px);
+    width: min(calc(var(--100nvw, 1vw) * 9.541667), 150px);
+    height: min(6.489062vh, 72px);
+    height: min(calc(var(--100nvh, 1vh) * 6.489062), 62px);
+    border: 1px solid rgba($color: #c4bbaa, $alpha: 1);
+    border-radius: 6px;
+    background-color: transparent;
+
+    margin-right: max(1%, 10px);
+
+    h2.button-header {
+        font-size: min(calc(0.4rem + 0.5vw), 0.875rem);
+        font-size: min(calc(0.4rem + var(--100nvw, 1vw) * 0.5), 0.875rem);
+        color: rgba($color: #c4bbaa, $alpha: 1);
+    }
+}
+
+.option-panel button.option-btn:last-child {
+    margin-right: 0;
+}
+
+.option-panel button.option-btn:hover {
+    box-shadow: 2px 2px 2px #c4bbaa;
+    color: #ebcb9a;
+    border-color: #ebcb9a;
+}
+
+.option-panel button.option-btn:hover:first-child {
+    box-shadow: -2px 2px 2px #c4bbaa;
+}
+
+.option-panel > button:last-child {
+    margin-right: 0;
+}
+
+.option-panel button.active-option-btn {
+    background-image: url("/images/icons/commons/select-btn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: min(9.541667vw, 180px);
+    width: min(calc(var(--100nvw, 1vw) * 9.541667), 180px);
+    height: min(6.489062vh, 72px);
+    height: min(calc(var(--100nvh, 1vh) * 6.489062), 62px);
+
+    h2.button-header {
+        font-size: min(calc(0.4rem + 0.5vw), 0.875rem);
+        font-size: min(calc(0.4rem + var(--100nvw, 1vw) * 0.5), 0.875rem);
+        color: #000000;
+    }
+}
+
+.option-panel .input-table {
+    display: grid;
+    flex: 0 0 50%;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    // border: 2px solid #c4bbaa;
+
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(2, 40%);
+
+    gap: 2% 2%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.option-panel .input-table .input-cell {
+    padding-right: 3vh;
+    padding-right: calc(var(--100nvh, 1vh) * 3);
+}
+
+.option-panel .input-table * input,
+.option-panel .input-table .user-field {
+    font-size: calc(0.4rem + 0.6vw);
+    font-size: calc(0.4rem + var(--100nvw, 1vw) * 0.6);
+
+    background: transparent;
+    border-bottom: 0.05rem solid #ffffff;
+    min-height: calc(1rem + 3vh);
+    min-height: calc(1rem + var(--100nvh, 1vh) * 3);
+    height: calc(1rem + 3vh);
+    height: calc(1rem + var(--100nvh, 1vh) * 3);
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c4bbaa;
+    opacity: 1; /* Firefox */
+}
+
+.option-panel .input-table * input:not([type="date"]) {
+    padding: 1vh 0;
+    padding: var(--100nvh, 1vh) 0;
+}
+
+.option-panel .input-table * label {
+    font-size: calc(0.4rem + 0.4vw);
+    font-size: calc(0.4rem + var(--100nvw, 1vw) * 0.4);
+    color: #c4bbaa;
+}
+
+.option-panel .input-table * textarea {
+    width: 30vw;
+    width: calc(var(--100nvw, 1vw) * 30);
+
+    height: 10vh;
+    height: calc(var(--100nvh, 1vh) * 10);
+    border: 0.05rem solid #c4bbaa;
+    resize: none;
+    padding: 2.5vh 1vw;
+    padding: calc(var(--100nvh, 1vh) * 2.5) var(--100nvw, 1vw);
+}
+
+.control-panel {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-height: 2.62963vh;
+    max-height: calc(var(--100nvh, 1vh) * 4.62963);
+}
+
+.control-panel .send-btn {
+    background-image: url("/images/icons/commons/send-btn-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-color: #3434;
+    filter: opacity(0.75) brightness(1.1);
+
+    width: 8.9583vw;
+    height: 4.62963vh;
+
+    width: min(calc(var(--100nvw, 1vw) * 8.9583), 172px);
+    height: min(calc(var(--100nvh, 1vh) * 4.62963), 50px);
+
+    color: #313131;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.control-panel .send-btn .send-btn-text {
+    /* flex-grow: 1; */
+    margin: auto 0 auto auto;
+    display: inline-block;
+    font-size: 18px;
+    // font-size: calc(0.4rem + var(--100nvw, 1vw) * 0.6);
+}
+
+.control-panel .send-btn .send-btn-arrow {
+    max-width: 10%;
+    width: 10%;
+    margin: auto;
+}
+
+.control-panel label.agreement-text {
+    max-width: 60%;
+    margin: auto 0;
+    font-size: min(calc(0.7rem + 0.3vh), 0.875rem);
+    font-size: min(calc(0.7rem + var(--100nvh, 1vh) * 0.3), 0.875rem);
+    font-weight: 300;
+    color: #fff;
+}
+
+input[type="date"].chrome-input-date {
+    padding: 1vh 0 !important;
+    padding: calc(var(--100nvh, 1vh)) 0 !important;
+}
+
+input[type="date"] {
+    appearance: none;
+    border: none;
+    background: transparent;
+    min-width: max-content;
+
+    min-height: calc(1rem + 3vh);
+    min-height: calc(1rem + var(--100nvh, 1vh) * 3);
+    height: calc(1rem + 3vh);
+    height: calc(1rem + var(--100nvh, 1vh) * 3);
+    color: #c4bbaa;
+
+    ::-webkit-datetime-edit-text {
+        // padding: 1vh;
+        // padding: var(--100nvh, 1vh);
+    }
+    ::-webkit-datetime-edit-month-field {
+        text-transform: uppercase;
+    }
+    ::-webkit-datetime-edit-day-field {
+        text-transform: uppercase;
+    }
+    ::-webkit-datetime-edit-year-field {
+        text-transform: uppercase;
+    }
+    ::-webkit-inner-spin-button,
+    ::-webkit-calendar-picker-indicator {
+        background: transparent;
+        display: none;
+        appearance: none;
+    }
+
+    ::-webkit-datetime-edit-ampm-field,
+    ::-webkit-datetime-edit-day-field,
+    ::-webkit-datetime-edit-hour-field,
+    ::-webkit-datetime-edit-millisecond-field,
+    ::-webkit-datetime-edit-minute-field,
+    ::-webkit-datetime-edit-month-field,
+    ::-webkit-datetime-edit-second-field,
+    ::-webkit-datetime-edit-week-field,
+    ::-webkit-datetime-edit-year-field {
+        font-size: calc(0.4rem + 0.6vw);
+        font-size: calc(0.4rem + var(--100nvw, 1vw) * 0.6);
+    }
+}
+
+.control-panel label.is-required-field::after {
+    content: " *";
+}
+
+/* Required field css marks */
+.control-panel label.is-invalid-field::after {
+    content: " *";
+    color: #af7977;
+}
+
+.control-panel .agreement-checkbox-container .is-invalid-field {
+    border-bottom: 0.05rem solid #af7977;
+}
+
+h2.is-send-error,
+h2.is-msg-sent {
+    font-family: "steilgut_opensans";
+    font-weight: lighter;
+    font-size: calc(0.6rem + 0.4vw);
+    // padding: 3vh 0;
+    // padding: calc(var(--100nvh, 1vh) * 3) 0;
+}
+
+h2.is-msg-sent {
+    // color: #ebcb9a;
+	color: #ffffcc;
+}
+
+h2.is-send-error {
+    color: #af7977;
+}
+
+.control-arrow {
+    top: 0%;
+    right: 0;
+    max-height: 15%;
+    max-width: 8%;
+    transform: translate(0, -50%);
+}
+
+.agreement-container {
+    .agreement-checkbox-container {
+        .checkmark {
+            border-color: #ffffff;
+        }
+
+        .checkmark::after {
+            filter: brightness(3.2);
+        }
+    }
+}
+
+/*********************************************************************
+*
+*************************** MEDIA QUERIES ****************************
+* @link 
+* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*
+**********************************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+    /* remove rounding corners */
+    textarea,
+    input[type="text"],
+    input[type="button"],
+    input[type="date"],
+    input[type="submit"] {
+        -webkit-appearance: none !important;
+        border-radius: 0 !important;
+    }
+
+    h1.legal-header {
+        font-size: 1.7rem;
+        font-size: calc(1rem + 1.5vmin);
+    }
+
+    .page-body {
+        max-height: unset;
+        height: unset;
+    }
+
+    .header .header-underline-img {
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 320px) and (orientation: portrait) {
+    .page-body {
+        margin-top: -15vh;
+    }
+
+    .page-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 4vh 3vw;
+        padding: calc(var(--100vh, 1vh) * 4) calc(var(--100vw, 1vw) * 3);
+        margin: auto;
+
+        max-height: unset;
+        min-height: 100%;
+        height: auto;
+    }
+
+    .header h1.header-text {
+        font-size: calc(0.7rem + 2.3vh);
+        font-size: calc(0.7rem + var(--100vh, 1vh) * 2.3);
+        margin: calc(0.1rem + 0.3vh) 0;
+        margin: calc(0.1rem + var(--100vh, 1vh) * 0.3) 0;
+    }
+
+    section.content-paragraph {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .option-panel .button-panel {
+        flex-wrap: nowrap;
+    }
+
+    .control-panel {
+        max-height: unset;
+        margin: 2vh 0;
+        margin: calc(var(--100vh, 1vh) * 2) 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        max-height: unset;
+        height: auto;
+    }
+
+    .page-form .option-panel {
+        max-height: unset;
+        height: auto;
+        min-height: 65%;
+    }
+
+    .control-panel label.agreement-text {
+        font-size: calc(0.8rem + 0.3vh);
+        font-size: calc(0.8rem + var(--100vh, 1vh) * 0.3);
+        max-width: 80%;
+        margin: auto auto auto 3%;
+    }
+
+    .control-panel .send-btn {
+        width: 50vw;
+        max-width: 50vw;
+
+        width: calc(var(--100vw, 1vw) * 50);
+        max-width: calc(var(--100vw, 1vw) * 50);
+
+        height: 8vh;
+        height: calc(var(--100vh, 1vh) * 8);
+
+        max-height: 8vh;
+        max-height: calc(var(--100vh, 1vh) * 8);
+    }
+
+    .option-panel button.option-btn {
+        width: 45vw;
+        width: calc(var(--100vw, 1vw) * 45);
+        max-width: 45vw;
+        max-width: calc(var(--100vw, 1vw) * 45);
+
+        height: 10vh;
+        height: calc(var(--100vh, 1vh) * 10);
+
+        max-height: 10vh;
+        max-height: calc(var(--100vh, 1vh) * 10);
+    }
+
+    .control-panel .send-btn,
+    .option-panel button.option-btn {
+        margin: 2vh 3vw 1vh 0;
+        margin: calc(var(--100vh, 1vh) * 2) calc(var(--100vw, 1vw) * 3) var(--100vh, 1vh) 0;
+    }
+
+    .page-form .content-text {
+        font-size: 1.275rem;
+        font-size: calc(0.4rem + 1.5vh);
+        font-size: calc(0.4rem + var(--100vh, 1vh) * 1.5);
+    }
+
+    .page-form .quote {
+        font-size: 1rem;
+        font-size: calc(0.5rem + 1.8vh);
+        font-size: calc(0.5rem + var(--100vh, 1vh) * 1.8);
+        font-weight: normal;
+    }
+
+    .page-form h2.subheader {
+        font-size: 1.3rem;
+        font-size: calc(1rem + 1vh);
+        font-size: calc(1rem + var(--100vh, 1vh) * 1);
+        margin: 0 0 2vh 0 !important;
+        margin: 0 0 calc(var(--100vh, 1vh) * 2) 0 !important;
+
+        max-width: 60%;
+        margin: 0;
+    }
+
+    .option-panel .input-table {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 100%;
+        padding: 2vh 2vw;
+        padding: calc(var(--100vh, 1vh) * 2) calc(var(--100vw, 1vw) * 2);
+        margin: auto;
+    }
+
+    .option-panel .button-panel {
+        margin: calc(0.3rem + 0.3vh) 0;
+        margin: calc(0.3rem + var(--100vh, 1vh) * 0.3) 0;
+    }
+
+    .option-panel button.option-btn h2.button-header {
+        font-size: 0.8rem;
+        font-size: calc(0.4rem + 1.4vh);
+        font-size: calc(0.4rem + var(--100vh, 1vh) * 1.7);
+    }
+
+    .option-panel button.active-option-btn h2.button-header {
+        font-size: 0.9rem;
+        font-size: calc(0.5rem + 1.6vh);
+        font-size: calc(0.5rem + var(--100vh, 1vh) * 1.7);
+    }
+
+    .option-panel .input-table * label {
+        font-size: 0.9rem;
+        font-size: calc(0.4rem + 1.7vh);
+        font-size: calc(0.4rem + var(--100vh, 1vh) * 1.7);
+    }
+
+    .option-panel .input-table .user-field {
+        font-size: 1.2rem;
+        font-size: calc(0.5rem + 1.8vh);
+        font-size: calc(0.5rem + var(--100vh, 1vh) * 1.8);
+    }
+
+    .option-panel .input-table * input:not([type="date"]) {
+        padding: 2vh 0;
+        padding: calc(var(--100vh, 1) * 2) 0;
+    }
+
+    .option-panel .input-table .user-field,
+    .option-panel .input-table * input {
+        height: 11vh;
+        height: calc(var(--100vh, 1vh) * 11);
+
+        max-height: 11vh;
+        max-height: calc(var(--100vh, 1vh) * 11);
+    }
+
+    .option-panel .input-table .input-cell {
+        margin: 2vh 0;
+        margin: calc(var(--100vh, 1) * 2) 0;
+
+        padding: 0;
+        min-height: 12vh;
+        min-height: calc(var(--100vh, 1vh) * 12);
+    }
+
+    .option-panel .input-table .time-row .input-cell:first-child {
+        margin: 2vh 2vw 2vh 0;
+        margin: calc(var(--100vh, 1) * 2) 2vw calc(var(--100vh, 1) * 2) 0;
+    }
+
+    .control-panel .send-btn .send-btn-text {
+        font-size: 1.2rem;
+        font-size: calc(0.9rem + 0.7vh);
+        font-size: calc(0.9rem + var(--100vh, 1vh) * 0.7);
+    }
+
+    input[type="date"] {
+        padding: 1.6vh 0;
+        padding: calc(var(--100vh, 1vh) * 1.6) 0;
+        font-size: calc(0.4rem + 1.9vh);
+        font-size: calc(0.4rem + var(--100vh, 1vh) * 1.9);
+    }
+
+    h2.is-send-error,
+    h2.is-msg-sent {
+        font-size: calc(0.8rem + 0.8vh);
+        font-size: calc(0.8rem + var(--100vh, 1vh) * 0.8);
+    }
+
+    .content-paragraph .content-text {
+        line-height: 28px;
+        line-height: calc(0.6rem + 3vw);
+        line-height: calc(0.6rem + var(--100vw, 1vw) * 3);
+    }
+
+    /* Paint check mark */
+    .agreement-container {
+        .agreement-checkbox-container {
+            .checkmark {
+            }
+
+            .checkmark::after {
+                left: 25%;
+            }
+        }
+    }
+
+    .control-panel label.agreement-text {
+        font-size: calc(0.6rem + 0.3vh);
+        font-size: calc(0.6rem + var(--100vh, 1vh) * 0.3);
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+            .page-form {
+                padding: 4vh 3vw;
+            }
+
+            .header h1.header-text {
+                font-size: calc(0.7rem + 2.3vh);
+                margin: calc(0.1rem + 0.3vh) 0;
+            }
+
+            .control-panel {
+                margin: 2vh 0;
+            }
+
+            .control-panel label.agreement-text {
+                font-size: calc(0.8rem + 0.3vh);
+            }
+
+            .control-panel .send-btn {
+                height: 8vh;
+                max-height: 8vh;
+            }
+
+            .option-panel button.option-btn {
+                height: 10vh;
+                max-height: 10vh;
+            }
+
+            .control-panel .send-btn,
+            .option-panel button.option-btn {
+                margin: 2vh 3vw 1vh 0;
+            }
+
+            .page-form .content-text {
+                font-size: calc(0.4rem + 1.5vh);
+            }
+
+            .page-form .quote {
+                font-size: calc(0.5rem + 1.8vh);
+            }
+
+            .page-form h2.subheader {
+                font-size: calc(1rem + 1vh);
+                margin: 0 0 2vh 0 !important;
+            }
+
+            .option-panel .input-table {
+                padding: 2vh 2vw;
+            }
+
+            .option-panel .button-panel {
+                margin: calc(0.3rem + 0.3vh) 0;
+            }
+
+            .option-panel button.option-btn h2.button-header {
+                font-size: calc(0.4rem + 1.4vh);
+            }
+
+            .option-panel button.active-option-btn h2.button-header {
+                font-size: calc(0.5rem + 1.6vh);
+            }
+
+            .option-panel .input-table * label {
+                font-size: calc(0.4rem + 1.7vh);
+                font-size: calc(0.4rem + var(--100vh, 1vh) * 1.7);
+            }
+
+            .option-panel .input-table .user-field {
+                font-size: calc(0.5rem + 1.8vh);
+            }
+
+            .option-panel .input-table * input:not([type="date"]) {
+                padding: 2vh 0;
+            }
+
+            .option-panel .input-table .user-field,
+            .option-panel .input-table * input {
+                height: 11vh;
+
+                max-height: 11vh;
+            }
+
+            .option-panel .input-table .input-cell {
+                margin: 2vh 0;
+                min-height: 12vh;
+            }
+
+            .option-panel .input-table .time-row .input-cell:first-child {
+                margin: 2vh 2vw 2vh 0;
+            }
+
+            .control-panel .send-btn .send-btn-text {
+                font-size: calc(0.9rem + 0.7vh);
+            }
+
+            input[type="date"] {
+                padding: 1.6vh 0;
+                font-size: calc(0.4rem + 1.9vh);
+            }
+
+            h2.is-send-error,
+            h2.is-msg-sent {
+                font-size: calc(0.8rem + 0.8vh);
+            }
+
+            .control-panel label.agreement-text {
+                font-size: calc(0.6rem + 0.3vh);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) {
+    .page-body {
+        margin-top: -20vh;
+    }
+
+    .option-panel button.option-btn h2.button-header {
+        font-size: 0.5rem;
+        font-size: calc(0.4rem + 1.5vh);
+        font-size: calc(0.4rem + var(--100vh, 1vh) * 1.5);
+    }
+
+    .option-panel button.active-option-btn h2.button-header {
+        font-size: 0.6rem;
+        font-size: calc(0.5rem + 1.6vh);
+        font-size: calc(0.5rem + var(--100vh, 1vh) * 1.7);
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+            .option-panel button.option-btn h2.button-header {
+                font-size: calc(0.4rem + 1.5vh);
+            }
+
+            .option-panel button.active-option-btn h2.button-header {
+                font-size: calc(0.5rem + 1.6vh);
+            }
+        }
+    }
+}
+
+/*
+    * @link: https://websiteedu.com/media-queries-for-mobile-and-tablets/?__cf_chl_jschl_tk__=f4b85448ac9131968259f036667ebbe13f3aee4e-1620873849-0-AfVyBOo3EXzkNnPk3o7Y2fBiOHMOfi9Ez_ELD5YtZPhiuNEWff8cy4MUte33zch82L-l8ED6GNcOpaSmkrLTf-MBeOtEwaD0lOUn3JpenolXersHBNrzqH1P2EriQDQ0T3zRwahK5L0Dv1HaV6FtQjSWLbpUA3dzW6f9QfGllFDKoFKyFoeR7ma8DzneAa8_lg_P4uZKkDeDNYNeu4N5ZPGU8bYgv7OSYrlY17sKUZYScM5cG5IWZdKKED70KvynQtzyL22ETSPnUUSdew9gTFo3xTQhiOjCO-h79BHYAl9u9yUtrVPzZ1vXPuL3d8DXGM_Dw7rSMbTARgqzMPirmWcZZnYgYI_Ad_puGDQEky3Mg4ma4ltgGVG__BKE_JGL1Th8dKZhG3-48KTSJNAwh_vX0x3SCvVckdjUkcc4yQ0fkkTUeEy55KZ76yiqO35_PVGoQGj4yBIYAe84TKs8hdVDH7LqZuz_8MfLbzsyRExG0ri6AZhSfs999AwnI72B0g
+    *
+    * @link https://viewportsizer.com/devices/
+    *
+    * Samsung 
+    * S8,8+,9,9+,10: W360px - H740px 4x
+    * Galaxy S6, S7, S7 Edge: W360px - H640px 4x
+    * Galaxy S4, S5, Note 3: W360px - H640px 3x
+    * Galaxy Note 10, 10+: W360px - H718px 2x
+    * Galaxy Note 8, 9: W360px - H740px 4x
+    * Galaxy S20 Ultra, S20+, S20: W480 - H1067 3x-4x
+    *
+    * Iphone
+    * iPhone 5, 5C, 5S, SE: W320px - H568px 2x
+    * iPhone 6 Plus, 6S Plus, 7 Plus, 8 Plus: W414px - H736px 3x
+    * iPhone 6, 6S, 7, 8: W375px - H667px 2x
+    * iPhone XR, 11: W414px - H896px 2x
+    * iPhone XS Max, 11 Pro Max: 414px - 896px 3x
+    * iPhone X, XS, 11 Pro: 375px -  812px 3x
+*/
+@media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    .page-body {
+        // position: relative;
+        margin-top: -15vh;
+    }
+
+    .page-form {
+        // position: relative;
+        z-index: 2;
+
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        max-width: 65.7344vw;
+        max-width: calc(var(--100vw, 1vw) * 65.7344);
+        width: 65.7344vw;
+        width: calc(var(--100vw, 1vw) * 65.7344);
+        max-height: unset;
+        height: auto;
+
+        margin: 0 0 7vh auto;
+        margin: 0 0 calc(var(--100vh, 1vh) * 7) auto;
+    }
+
+    section.content-paragraph {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .header h1.header-text {
+        font-size: calc(0.7rem + 2.3vw);
+        margin: calc(0.1rem + 0.3vw) 0;
+    }
+
+    .option-panel {
+        max-height: unset;
+        height: auto;
+    }
+
+    .option-panel .input-table .input-cell {
+        margin-right: 2vw;
+        margin-right: calc(var(--100vw, 1vw) * 2);
+        height: 17vh;
+        height: calc(var(--100vh, 1vh) * 17);
+        max-height: 62px;
+        min-height: unset;
+    }
+
+    .option-panel .input-table {
+        flex: 1 1 50%;
+        grid-template-rows: repeat(3, 33%);
+    }
+
+    .option-panel .input-table * label {
+        font-size: calc(0.4rem + 0.4vw);
+        font-size: calc(0.4rem + var(--100vw, 1vw) * 0.4);
+    }
+
+    .option-panel .input-table * input {
+        padding: 1vh 0;
+        padding: var(--100vh, 1vh) 0;
+    }
+
+    .option-panel button.option-btn {
+        width: 15.541667vw;
+        height: calc(0.5rem + 11.489062vh);
+
+        width: 15.541667vw;
+        width: calc(var(--100vw, 1vw) * 15.541667);
+        height: calc(0.5rem + 11.489062vh);
+        height: calc(0.5rem + var(--100vh, 1vh) * 11.489062);
+    }
+
+    .option-panel .control-panel {
+        min-height: 12.62963vh;
+        min-height: calc(var(--100vh, 1vh) * 12.62963);
+
+        margin-top: calc(0.5rem + 0.5vh);
+        margin-top: calc(0.5rem + var(--100vh, 1vh) * 0.5);
+
+        align-items: center;
+
+        flex-direction: row;
+        max-height: unset;
+    }
+
+    .control-panel .send-btn {
+        width: 15.9583vw;
+        height: 8.62963vh;
+
+        max-height: 35px;
+        max-width: 100px;
+    }
+
+    .control-panel .send-btn .send-btn-text {
+        font-size: calc(0.5rem + 1vh);
+    }
+
+    .option-panel .input-table .user-field {
+        // min-height: 8vh;
+        // min-height: calc(var(--100vh, 1vh) * 8);
+
+        // height: 8vh;
+        // height: calc(var(--100vh, 1vh) * 8);
+
+        padding: 1vh 0;
+        padding: var(--100vh, 1vh) 0;
+
+        font-size: calc(0.4rem + 0.9vh);
+        font-size: calc(0.4rem + var(--100vh, 1vh) * 0.9);
+
+        max-height: 23px;
+        min-height: 23px;
+    }
+
+    .option-panel .input-table * input[type="date"] {
+        ::-webkit-date-and-time-value {
+            margin-right: 0 !important;
+            display: inline !important;
+        }
+    }
+
+    .option-panel button.option-btn h2.button-header {
+        font-size: 0.7rem;
+        font-size: calc(0.6rem + 15%);
+    }
+
+    .option-panel button.active-option-btn h2.button-header {
+        font-size: 0.8rem;
+        font-size: calc(0.6rem + 30%);
+    }
+
+    h2.is-send-error,
+    h2.is-msg-sent {
+        font-size: 3vh;
+        font-size: calc(var(--100vh, 1vh) * 3vh);
+    }
+
+    .content-paragraph .content-text {
+        font-size: 0.8rem;
+        font-size: calc(0.4rem + 0.8vw);
+
+        line-height: 28px;
+        line-height: calc(0.5rem + 3vh);
+        line-height: calc(0.5rem + var(--100vh, 1vh) * 3);
+    }
+
+    .control-panel .agreemnet-checkbox-label-container {
+    }
+
+    .control-panel .agreement-checkbox-container {
+    }
+
+    /* Create a custom checkbox */
+    .control-panel .agreement-checkbox-container .checkmark {
+        border-radius: 0.35vh;
+    }
+
+    .control-panel .agreement-checkbox-container {
+    }
+
+    .control-panel .agreement-checkbox-container .checkmark::after {
+    }
+
+    .control-panel .agreemnet-checkbox-label-container .agreement-text {
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+            .page-form {
+                margin: 0 0 7vh auto;
+            }
+
+            .option-panel .input-table .input-cell {
+                min-height: 16vh;
+            }
+
+            .option-panel .input-table * input {
+                padding: 1vh 0;
+            }
+
+            .option-panel button.option-btn {
+                height: calc(0.5rem + 11.489062vh);
+            }
+
+            .option-panel .control-panel {
+                min-height: 6.62963vh;
+                margin-top: calc(0.5rem + 0.5vh);
+            }
+
+            .option-panel .input-table .user-field {
+                // min-height: 6vh;
+                // height: 6vh;
+                padding: 1vh 0;
+                font-size: calc(0.4rem + 0.9vh);
+            }
+
+            h2.is-send-error,
+            h2.is-msg-sent {
+                font-size: 3vh;
+            }
+
+            .content-paragraph .content-text {
+                line-height: calc(0.5rem + 3vh);
+            }
+
+            .control-panel .agreement-checkbox-container .checkmark {
+                border-radius: 0.35vh;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
+    .option-panel button.option-btn h2.button-header {
+        font-size: 0.4rem;
+        font-size: calc(0.27rem + 12%);
+    }
+
+    .option-panel button.active-option-btn h2.button-header {
+        font-size: 0.5rem;
+        font-size: calc(0.4rem + 20%);
+    }
+
+    option-panel button.option-btn {
+        width: 15.541667vw;
+
+        height: calc(0.5rem + 11.489062vh);
+        height: calc(0.5rem + var(--100vh, 1vh) * 11.489062);
+    }
+
+    .control-panel .agreement-checkbox-container .checkmark::after {
+    }
+
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        option-panel button.option-btn {
+            height: calc(0.5rem + 11.489062vh);
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
+    /* Safari only */
+    @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+        @supports (-webkit-appearance: none) {
+        }
+    }
+}
+
+/* Laptops, desktops, large screens: [... 16/10) ----------- */
+@media only screen and (min-width: 1025px) and (max-aspect-ratio: 159/100) {
+    /* Styles */
+    .page-form {
+        max-width: 60.2222vw;
+        max-width: calc(var(--100nvw, 1vw) * 60.2222);
+        width: 60.2222vw;
+        width: calc(var(--100nvw, 1vw) * 60.2222);
+    }
+
+    .option-panel .input-table {
+        flex: 0 1 35%;
+    }
+
+    .control-panel {
+        max-height: 2.8828vh;
+        max-height: calc(var(--100nvh, 1vh) * 2.8828);
+    }
+
+    .control-panel .send-btn {
+        width: 11.9444vw;
+        width: calc(var(--100nvw, 1vw) * 11.9444);
+        height: 4.8828vh;
+        height: calc(var(--100nvh, 1vh) * 4.8828);
+    }
+
+    .control-panel .agreement-checkbox-container {
+    }
+
+    /* Paint check mark */
+    .control-panel .agreement-checkbox-container .checkmark::after {
+    }
+}
+
+/* Laptops, desktops, large screens: [16/10 ...] ----------- */
+@media only screen and (min-width: 1025px) and (min-aspect-ratio: 16/10) {
+    .page-form {
+        max-height: calc(var(--100nvh, 1vh) * 82);
+        overflow: auto;
+    }
+
+    .content-text {
+        font-size: calc(0.4rem + 1.1vh);
+        font-size: calc(0.4rem + var(--100nvh, 1vh) * 1.1);
+    }
+
+    .quote {
+        font-size: calc(0.4rem + 1.1vh);
+        font-size: calc(0.4rem + var(--100nvh, 1vh) * 1.1);
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-height: 768px) and (orientation: landscape) {
+    .page-form {
+        max-height: 600px;
+        overflow: auto;
+    }
+
+    .option-panel .input-table {
+        display: grid;
+        flex: 1 0 40%;
+        grid-template-rows: repeat(2, 47%);
+    }
+
+    .content-text {
+        line-height: calc(1rem + var(--100nvh, 1vh) * 0.6);
+    }
+}

@@ -1,0 +1,1181 @@
+img {
+    border: 0;
+}
+
+html,
+body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+
+    overflow: auto;
+}
+
+/* App div
+----------*/
+
+#cms-app {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    align-items: stretch;
+
+    height: auto;
+
+    min-height: 100%;
+    min-height: 100vh;
+
+    min-width: 100%;
+    min-width: -webkit-fill-available;
+    max-width: 100%;
+    max-width: -webkit-fill-available;
+    overflow: hidden;
+}
+
+.cms-header,
+.cms-footer {
+    display: flex;
+    flex: 0 0 7vh;
+    min-height: 7vh;
+    background-color: rgba(153, 102, 51, 0.03);
+    position: relative;
+    z-index: 9;
+}
+
+.cms-main,
+.dashboard-content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cms-lang-switch {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+/*
+* It is used for store, basket pages
+*/
+.light-bg {
+    background-color: #eeeeee !important;
+}
+
+/*
+* It is used for all pages excluding store, basket pages
+*/
+.dark-bg {
+    background-color: #313131 !important;
+}
+
+/*
+* Show a message in the center of a display
+*/
+.centered-msg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 20;
+    margin: 0;
+}
+
+.centered {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.disabled-element {
+    opacity: 0.2;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+/*
+* A flex box inherited full height and width of a parent 
+*/
+
+.transit-flex-box {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+}
+
+.minus-z-1 {
+    z-index: -1;
+}
+
+[v-cloak],
+spinner {
+    display: block;
+    padding: 50px 0;
+
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        border-top-color: #333;
+        animation: spinner 0.6s linear infinite;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    & > div {
+        display: none;
+    }
+}
+.bg-filter {
+    /*
+         * https://www.cssmatic.com/box-shadow
+         * https://css-tricks.com/almanac/properties/b/box-shadow/#example
+         */
+    -webkit-box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+}
+
+.light-bg-shadow-filter {
+    background-image: url("/images/orig/header/shadows/mobile/portrait/light-menu-shadow.svg");
+    background-size: 100%;
+    opacity: 0.9;
+}
+
+/*
+* Transitions (this classes are used on a Wine Catalog page (url: /masthead/wines))
+*/
+.fade-inOut-zindex-opacity-img {
+    transition-property: opacity, z-index;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.fade-inOut-opacity {
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.fade-inOut-opacity-display {
+    transition-property: opacity, display;
+    transition-duration: 1.5s;
+    transition-delay: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.fade-filter-img {
+    transition-property: filter;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.vfade-enter-active, .vfade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+    transition: opacity 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.smooth-width-change {
+    transition-property: width;
+    transition-duration: 1.5s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-fade-enter-active {
+    animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.img-fade-enter-active {
+    animation: img-fade-in 1s;
+}
+
+@keyframes img-fade-in {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(2);
+        /* transform: translate(-50%, -50%); */
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.transit-flex-box {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+    max-width: 100%;
+}
+
+.debug-border {
+    border: 2px solid #ebcb9a;
+}
+
+/*
+* =========================== CMS ===========================
+*/
+.welcome-pg-body,
+.welcome-pg-content,
+.welcome-pg-bg-img {
+    min-width: 100%;
+    height: 100vh;
+}
+
+.welcome-pg-body {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-pg-content,
+.welcome-pg-bg-img {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.welcome-pg-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* height: auto; */
+}
+
+.welcome-pg-bg-img {
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /*		-webkit-transition: all 2s ease-in-out;
+		transition: all 2s ease-in-out;*/
+}
+
+.welcome-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-controls a:hover {
+    text-decoration: none;
+}
+
+.dashboard-content {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-editable {
+    background-color: white;
+}
+
+.sm-visible {
+    display: none;
+}
+
+.cms-main {
+    &__messages {
+        max-width: 73%;
+    }
+}
+
+.items {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &-navbar {
+        display: flex;
+        flex-direction: column;
+        min-width: 30%;
+        height: auto;
+        justify-content: stretch;
+        align-items: flex-start;
+        padding: 5% 0 0 5%;
+
+        &::after {
+            content: "";
+            width: 3px;
+            background-image: linear-gradient(180deg, #313131 0%, $STEILGUT_GOLD_COLOR 99%);
+            position: absolute;
+            top: 7vh;
+            left: 30%;
+            height: 86vh;
+
+            transition: 1s all ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                background-image: unset;
+                background-color: rgba(70, 170, 190, 0.2);
+            }
+        }
+
+        &-title {
+            h1 {
+                font-size: calc(1.5rem + 1vh);
+                margin: auto auto 2% auto;
+            }
+        }
+
+        &-title,
+        &-list {
+            min-width: 100%;
+
+            &-link {
+                font-size: calc(0.8rem + 1vh);
+            }
+
+            &-active-link {
+                font-size: calc(1rem + 1vh);
+                background-color: rgba(70, 170, 190, 0.2);
+            }
+        }
+
+        li:hover {
+            text-decoration: none;
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-content {
+        max-width: 65%;
+        width: 65%;
+        margin: auto;
+
+        &-common-control {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &-create-item {
+                width: 115px;
+                height: 40px;
+            }
+        }
+
+        &-active-category {
+            min-width: 100%;
+            min-height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 2% 0 0 0;
+
+            .news {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-width: 100%;
+                min-height: 100%;
+
+                &-line {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    min-width: 100%;
+                    min-height: 100%;
+
+                    .news-item {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 30%;
+
+                        .news-item-header-block {
+                        }
+
+                        .news-item-img {
+                            max-height: 437.5px;
+                            height: 50vh;
+                        }
+
+                        .news-item-title,
+                        .news-item-posting-date {
+                            max-height: 10%;
+                        }
+
+                        .news-item-posting-date {
+                            max-height: 15%;
+                        }
+
+                        .news-item-title {
+                            max-height: 10%;
+                        }
+
+                        .news-item-title h1,
+                        .news-item-posting-date h1 {
+                            font-family: "steilgut_opensans", Arial, Helvetica, sans-serif;
+                            font-weight: 100;
+                            font-size: 100%;
+                        }
+
+                        .news-item-title h1 {
+                            @include dots-2line-string;
+                        }
+
+                        .news-control {
+                            display: grid;
+                            flex-direction: row;
+                            grid-template-columns: 1fr 1fr;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .news-navigation .paginator {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .wines {
+                &-branches {
+                    width: 70%;
+                    margin: auto;
+
+                    .card-title {
+                        font-family: "steilgut_cormorant", sans-serif;
+                        font-weight: 400;
+                        font-size: calc(1rem + 1vh);
+                    }
+
+                    .card-img-top {
+                        min-height: 55vh;
+                        height: 55vh;
+                        object-fit: cover;
+                    }
+                }
+
+                &-catalog-list {
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+
+            .wines-item {
+                height: auto;
+                min-height: 70vh;
+
+                .wines-control {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 100%;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                    .edit-review-item {
+                        width: 100%;
+                    }
+                }
+
+                header.wines-item-header-block {
+                    min-height: 60vh;
+                    height: auto;
+                    .wines-item-img {
+                        min-height: 50vh;
+                        height: 50vh;
+                    }
+
+                    section.wines-item-info {
+                        max-width: 100%;
+                        margin: auto;
+
+                        h1.wine-header-text {
+                            margin-top: 2vh;
+                        }
+
+                        h1,
+                        h2 {
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .wines-control {
+                    min-height: 10vh;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.item-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    min-height: 100%;
+    max-width: 100%;
+
+    .item-form-primary-fields,
+    header.item-form-header {
+        max-width: 80%;
+        width: 80%;
+    }
+
+    .item-form-control {
+        position: relative;
+        z-index: 9;
+
+        max-width: 444px;
+        max-height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        grid-gap: 0.2em;
+        margin: 0.5em auto;
+
+        &-btn-container {
+            min-width: 220px;
+            max-width: 220px;
+        }
+    }
+
+    .news-catalog-form {
+        &-content {
+            width: 90vw;
+            margin: auto;
+            &-primary-field-list {
+                min-height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 0 auto 0 auto;
+                width: 80%;
+
+                .upload-box,
+                .upload-box-content {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .upload-box {
+                    position: relative;
+                    display: flex;
+                    // justify-content: center;
+                    align-items: center;
+                    width: 320px;
+                    min-height: 300px;
+                    height: auto;
+                }
+
+                .upload-box-img {
+                    position: relative;
+                    z-index: 0;
+                    height: auto;
+                    min-width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    object-fit: contain;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    background-size: cover;
+                    // opacity: 0.5;
+                    /*		-webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;*/
+                }
+
+                .upload-box-content {
+                    position: absolute;
+                    width: 60%;
+                    height: 30%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                }
+
+                &-text-field-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .lang-drop-down-list-container {
+                        background-color: rgba(153, 102, 51, 0.03);
+                        max-width: 200px;
+                        width: 100%;
+                    }
+
+                    .text-field-box {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: auto;
+                        background-color: rgba(153, 102, 51, 0.03);
+                    }
+
+                    .text-fields > input {
+                        max-width: calc(7.5em + 10vw);
+                        width: calc(7.5em + 10vw);
+                    }
+                }
+            }
+        }
+    }
+
+    // WINES
+    // WINES CATALOG
+    // WINES SLIDER
+    form.wines-catalog-form,
+    form.wines-slider-form,
+    form.news-catalog-form {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        max-height: 100%;
+        min-height: 100%;
+        background-color: #343434;
+
+        .item-form-control {
+            &-btn {
+                min-width: 220px;
+                max-width: 220px;
+            }
+        }
+
+        // see partials.wines.wines-catalog-item-content
+        .wines-item-content {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-around;
+            padding: 42px 0;
+
+            input[type="text"],
+            input[type="number"] {
+                background: transparent;
+                border: none;
+            }
+
+            .form-control {
+                color: #fff;
+                background: transparent;
+            }
+
+            .form-control:focus {
+                border-color: $STEILGUT_GOLD_COLOR;
+                box-shadow: inset 0 1px 1px rgba(52, 52, 52, 0.075), 0 0 8px rgba(235, 204, 154, 0.5);
+            }
+
+            .lang-drop-down-list-container {
+                position: relative;
+                max-width: 25vw;
+
+                .drop-down-box {
+                    padding: 0;
+
+                    .drop-down-box-header {
+                        margin: 0;
+                        padding: 2px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .drop-down-header-text {
+                            max-width: 70%;
+                            width: 70%;
+
+                            height: 7vh;
+                            max-height: 33px;
+
+                            @include text-wrapper;
+                        }
+
+                        .drop-down-container {
+                            padding: 4px 0;
+                            margin: 0;
+                            top: calc(100% + 2px);
+                        }
+
+                        .drop-down-box-arrow-up,
+                        .drop-down-box-arrow-down {
+                            max-width: 15%;
+                            width: 15%;
+                            img {
+                                margin: auto;
+                            }
+                        }
+                    }
+
+                    .drop-down-container {
+                        position: absolute;
+                        margin-top: 1vh;
+                    }
+                }
+            }
+
+            .lang-drop-down-list-container:hover {
+                appearance: none;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+                border-color: $STEILGUT_GOLD_COLOR;
+                box-shadow: inset 0 1px 1px rgba(52, 52, 52, 0.075), 0 0 8px rgba(235, 204, 154, 0.7);
+            }
+
+            .bg-upload-image-box {
+                position: relative;
+            }
+
+            &-row {
+                position: relative;
+                z-index: 9;
+
+                .wine-property-col-container {
+                    appearance: none;
+                    border-radius: 0.25rem;
+                    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                }
+
+                .wine-property-col-container:hover {
+                    border-color: $STEILGUT_GOLD_COLOR;
+                    box-shadow: inset 0 1px 1px rgba(52, 52, 52, 0.075), 0 0 8px rgba(235, 204, 154, 0.5);
+                }
+
+                .bottle-img {
+                    max-height: 720px;
+                    height: 720px;
+
+                    padding-right: 8%;
+                }
+
+                .wine-item-title {
+                    &-input {
+                        font-family: "steilgut_cormorant", sans-serif;
+                        font-weight: 400;
+
+                        font-size: 42px;
+                        font-size: calc(1.5rem + 1.375vmin);
+
+                        text-transform: uppercase;
+                        max-width: fit-content;
+                        width: fit-content;
+
+                        padding-left: 0;
+                        width: 250px;
+                        width: 15vw;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 70%;
+                        height: 14px;
+                        background: url("/images/icons/single-wine-pg/header-underscore-line.svg") center (left/contain)
+                            no-repeat;
+                    }
+                }
+
+                h1.wine-item-title-text {
+                    @include item-title();
+                }
+
+                input.wine-item-type-input,
+                h2.wine-item-type-text {
+                    font-size: 24px;
+                    font-size: calc(1rem + 0.6vmin);
+                    font-family: "steilgut_cormorant", sans-serif;
+                    font-weight: 400;
+                }
+
+                input.wine-item-type-input {
+                    padding-left: 0;
+                }
+
+                h2.harvest-text, 
+                input.harvest-text {
+                    color: $STEILGUT_WHITE_COLOR;
+                    font-family: "steilgut_plantagenet_cherokee", sans-serif;
+                    font-size: 32px;
+                    font-size: calc(1rem + 1.25vmin);
+                    font-weight: 300;
+                    text-align: right;
+                }
+
+                .price-cart-container,
+                .price-count-container {
+                    .price-text,
+                    .count-text {
+                        color: $STEILGUT_GOLD_COLOR;
+                        font-family: "steilgut_opensans", sans-serif;
+                        font-size: 32px;
+                        font-size: calc(1rem + 1vmin);
+                        font-weight: 300;
+                        text-align: left;
+                    }
+
+                    h2.count-text {
+                        margin-top: 1rem;
+                    }
+
+                    h3.price-note-text,
+                    h3.count-note-text {
+                        /* Style for "минимальны" */
+                        color: $STEILGUT_BEIGE_COLOR;
+                        font-family: "steilgut_opensans", sans-serif;
+                        font-size: 12px;
+                        font-size: calc(0.4rem + 0.41vmin);
+                        font-weight: 300;
+                        text-align: left;
+                    }
+
+                    .edit-container {
+                        width: 11vw;
+                        text-align: right;
+
+                        input.price-text,
+                        input.count-text {
+                            width: 7vw;
+                            text-align: right;
+                        }
+
+                        input.count-text {
+                            margin-top: 1rem;
+                        }
+
+                        h3.price-note-text,
+                        h3.count-note-text {
+                            width: unset;
+                            text-align: right;
+                        }
+                    }
+
+                    .cart-container {
+                        h3.price-cart-text {
+                            /* Style for "Добавить" */
+                            max-width: 72px;
+                            color: $STEILGUT_GOLD_COLOR;
+                            font-family: "steilgut_opensans", sans-serif;
+                            font-size: 15px;
+                            font-size: calc(0.4rem + 0.64vmin);
+                            font-weight: 300;
+                            line-height: 18px;
+                            text-align: left;
+                            display: inline-block;
+                        }
+
+                        .add-to-cart-bg-icon-container {
+                            position: relative;
+
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-right: 10px;
+                            width: 40px;
+                            height: 40px;
+
+                            .add-to-cart-bg-icon {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            /* Draw plus*/
+
+                            /* Style for "Horizontal line of Add To Cart" */
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 12px;
+                                height: 0;
+                                border: 1px solid #000000;
+                            }
+
+                            /* Style for "Vertical line of Add To Cart"*/
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 0;
+                                height: 12px;
+                                border: 1px solid #000000;
+                            }
+
+                            &:hover {
+                                &::before,
+                                &::after {
+                                    border-color: $STEILGUT_BEIGE_COLOR;
+                                }
+                            }
+
+                            &:active {
+                                &::before,
+                                &::after {
+                                    border-color: $STEILGUT_RED_COLOR;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wine-property-table-container {
+                    margin-top: 56px;
+
+                    & .row .sm-hidden {
+                        display: flex;
+                    }
+
+                    & .row .sm-visible {
+                        display: none;
+                    }
+
+                    & .row .wine-property-col {
+                        min-height: 74px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h2.property-1st-row-value-text,
+                        input.property-1st-row-value-text {
+                            /* Style for "11,5" */
+                            color: #ffffff;
+                            font-family: "steilgut_opensans", sans-serif;
+                            font-size: 26px;
+                            font-size: calc(1rem + 0.8vmin);
+                            font-weight: 300;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                        }
+
+                        h2.property-2nd-row-value-text,
+                        input.property-1st-row-value-text {
+                            color: #ffffff;
+                            font-family: "steilgut_opensans", sans-serif;
+                            font-size: 20px;
+                            font-size: calc(0.8rem + 0.8vmin);
+                            font-weight: 300;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            text-align: left;
+                        }
+
+                        h3.property-header-text {
+                            max-width: 178px;
+                            color: $STEILGUT_BEIGE_COLOR;
+                            font-family: "steilgut_opensans", sans-serif;
+                            font-size: 17px;
+                            font-size: calc(0.7rem + 0.7vmin);
+                            font-weight: 300;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                        }
+                    }
+
+                    & .row:nth-child(1) {
+                        margin-bottom: 27px;
+                    }
+                }
+
+                .additional-note {
+                    margin-top: 39px;
+
+                    .control-room {
+                        /* Style for "Line 2" */
+                        min-width: 100%;
+                        border-bottom: 1px solid $STEILGUT_BEIGE_COLOR;
+
+                        .ctrl-link {
+                            display: inline-block;
+                            color: $STEILGUT_BEIGE_COLOR;
+                            font-family: "steilgut_opensans", sans-serif;
+                            font-size: 1rem;
+                            font-weight: 300;
+                            text-align: left;
+                            text-decoration: underline;
+                            padding: 14px 0 14px 0;
+                        }
+
+                        .active-ctrl-link {
+                            color: $STEILGUT_GOLD_COLOR;
+                        }
+
+                        .harvest-aspect-icon {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 21px;
+                            height: 21px;
+                            margin-right: 10px;
+                        }
+
+                        .harvest-aspect-ctrl-link:after {
+                            content: "";
+                            display: inline-block;
+                            vertical-align: middle;
+                            /* Style for "Line" */
+                            width: 1px;
+                            height: 16px;
+                            border: 1px solid $STEILGUT_BEIGE_COLOR;
+                            margin: 0 26px;
+                        }
+
+                        .taste-icon {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 21px;
+                            height: 21px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &-textarea,
+                    &-text {
+                        padding: 36px 12px 12px 12px;
+                        min-width: 100%;
+                        max-width: 100%;
+                        height: 149px;
+                        background: transparent;
+                        overflow: auto;
+                    }
+
+                    &-textarea {
+                        outline: none;
+                    }
+
+                    &-textarea:focus {
+                        border-color: $STEILGUT_GOLD_COLOR;
+                        box-shadow: inset 0 1px 1px rgba(52, 52, 52, 0.075), 0 0 8px rgba(235, 204, 154, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.thread-editor {
+    max-width: 70%;
+    max-height: 100%;
+    min-height: 30%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    resize: both;
+    overflow: auto;
+    margin: 8px auto 0 auto;
+}
+
+.ckeditor4 {
+    margin: 5% auto;
+}
+
+/*
+* ====================== END:CMS ===============================
+*/

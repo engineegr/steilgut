@@ -1,0 +1,831 @@
+/* App div
+----------*/
+
+#app {
+  display: block;
+  margin: auto;
+  align-content: stretch;
+
+  height: 100%;
+  height: 100vh;
+  height: -webkit-fill-available;
+
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  max-width: 100%;
+  width: 100%;
+  // overflow: visible is a default initial value unless the scrollbar is transparent
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+  color: #ffffff;
+
+  opacity: 0;
+}
+
+.is-content-height-minimum {
+}
+
+.is-content-width-minimum {
+}
+
+.is_full_screen_width {
+}
+
+/*
+* It is used for store, basket pages
+*/
+.light-bg {
+  background-color: #eeeeee !important;
+}
+
+/*
+* It is used for all pages excluding store, basket pages
+*/
+.dark-bg {
+  background-color: rgba(51, 51, 51, 1) !important;
+}
+
+.soft-gray {
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+  color: rgb(232, 225, 213);
+}
+
+/*
+* Show a message in the center of a display
+*/
+.centered-msg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 20;
+  margin: 0;
+}
+
+.centered {
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.disabled-element {
+  opacity: 0.2;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.img-fp {
+  min-height: 100vh;
+  height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+}
+
+.img-half-screen {
+  max-height: 50vh;
+  height: 50vh;
+  max-width: 100vw;
+  width: 100vw;
+}
+
+.mobile-landscape-fp-img {
+  max-height: 100vh;
+  height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+
+  /* Safari only */
+  @media not all and (min-resolution: 0.001dpcm) and (-webkit-min-device-pixel-ratio: 0) {
+    @supports (-webkit-appearance: none) {
+      max-height: calc(var(--100vh, 1vh) * 100);
+      height: calc(var(--100vh, 1vh) * 100);
+      min-width: calc(var(--100vw, 1vw) * 100);
+      width: calc(var(--100vw, 1vw) * 100);
+    }
+  }
+}
+
+/*
+* A flex box inherited full height and width of a parent 
+*/
+
+.transit-flex-box {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+}
+
+.packed-flex-box {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 0;
+  max-height: 100%;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+.shrink-transit-flex-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.minh-transit-flex-box {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  min-height: 280px;
+}
+
+.minus-z-1 {
+  z-index: -1;
+}
+
+[v-cloak] > * {
+  display: none;
+}
+[v-cloak]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("/images/orig/pulse-logo/logo@2x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 185px;
+  height: 130px;
+  animation: pulse 5s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    25% {
+      transform: translate(-50%, -50%) scale(1.1);
+      /* transform: translate(-50%, -50%); */
+      opacity: 0.1;
+    }
+
+    50% {
+      transform: translate(-50%, -50%) scale(1.25);
+      /* transform: translate(-50%, -50%); */
+      opacity: 0.1;
+    }
+
+    75% {
+      transform: translate(-50%, -50%) scale(1.5);
+      /* transform: translate(-50%, -50%); */
+      opacity: 0.1;
+    }
+
+    100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+}
+
+/*
+ * https://www.cssmatic.com/box-shadow
+ * https://css-tricks.com/almanac/properties/b/box-shadow/#example
+ */
+.bg-filter {
+  -webkit-box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 5vh 100vh 100px rgba(0, 0, 0, 0.75);
+}
+
+.light-bg-shadow-filter {
+  background-image: url("/images/orig/header/shadows/mobile/portrait/light-menu-shadow.svg");
+  background-size: 100%;
+  opacity: 0.9;
+}
+
+/*
+* Transitions (this classes are used on a Wine Catalog page (url: /masthead/wines))
+*/
+.fade-inOut-zindex-opacity-img {
+  transition-property: opacity, z-index;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-inOut-opacity {
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-inOut-opacity-display {
+  transition-property: opacity, display;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-filter-img {
+  transition-property: filter;
+  transition-duration: 1.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.vfade-enter-active, .vfade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+  transition: opacity 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.smooth-width-change {
+  transition-property: width;
+  transition-duration: 1.5s;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.anim-fade-enter-active {
+  animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.img-fade-enter-active {
+  animation: img-fade-in 1s;
+}
+
+@keyframes img-fade-in {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(2);
+    /* transform: translate(-50%, -50%); */
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/*
+* Precaution page
+*/
+
+.zero-opacity {
+  opacity: 0;
+}
+
+.out-of-space {
+  top: -9999px;
+  left: -9999px;
+  position: absolute;
+}
+
+._050-opacity {
+  opacity: 0.5;
+}
+
+._020-opacity {
+  opacity: 0.2;
+}
+
+._005-opacity {
+  opacity: 0.05;
+}
+
+.full-opacity {
+  opacity: 1;
+}
+
+.fully-invisible {
+  display: none !important;
+}
+
+/*
+* Masthead banners
+*/
+.control-responsive-img {
+}
+
+.dummy-style-class {
+}
+
+.banner-fade-enter-active,
+.banner-fade-leave-active {
+  transition: opacity 3s ease-in-out;
+}
+
+.banner-fade-enter, .banner-fade-leave-to
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/* Transition for route changes: see Mathead: router-link view */
+.routes-fade-enter-active {
+  transition: opacity 1.5s ease-in-out;
+}
+
+.routes-fade-enter
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.routes-fade-leave {
+  opacity: 0;
+  height: 0;
+}
+
+.announce-fade-enter-active {
+  transition: opacity 3s ease-in-out;
+}
+
+.announce-fade-enter
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.announce-fade-leave {
+  opacity: 0;
+  display: none;
+}
+
+/*
+* ======== SLIDER ==========================
+*/
+
+.md-default-slider-items-to-content-style-class {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.md-steilgut-history-items {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  width: 50%;
+  max-width: 50%;
+
+  height: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+.md-steilgut-history-items-to-content {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+
+  width: 80%;
+  min-width: 0;
+  max-width: 80%;
+
+  height: 85%;
+  max-height: 85%;
+}
+
+.landscape-steilgut-history-item-block {
+  position: relative;
+  z-index: 10;
+  height: auto;
+}
+
+.steilgut-history-item-block {
+  position: relative;
+  z-index: 10;
+  // page header for portrait is 101px
+  margin-top: 37vh;
+  height: auto;
+  width: 87vw;
+  min-width: 87vw;
+}
+
+/*
+/* Wine Slider 
+*/
+
+/* Style class for wine items block (the desktop layout) */
+.md-wine-items-block {
+  display: flex;
+  flex: 1 0 auto;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+/* Style class for wine items block (the portrait phone layout) */
+.wine-items-block {
+  display: block;
+  // position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  // max-height: 100%;
+}
+
+/* Style class for wine items block (the landscape phone layout) */
+.ls-wine-items-block {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: calc(var(--100vh, 1vh) * 100);
+}
+
+.top-slider-control {
+  top: 0;
+  right: 0;
+}
+
+.bottom-slider-control {
+  top: 50%;
+  right: 0;
+}
+
+/* Wine catalog: width of left and right background images */
+.lqip-16_9-img {
+}
+
+.lqip-left-bg-wines-16_9-img {
+  width: 56vw;
+  width: calc(var(--100nvw, 1vw) * 56);
+  min-width: 56vw;
+  min-width: calc(var(--100nvw, 1vw) * 56);
+}
+
+.left-bg-wines-16_9-img {
+  max-width: 51.5vw;
+  max-width: calc(var(--100nvw, 1vw) * 51.5);
+  width: 51.5vw;
+  width: calc(var(--100nvw, 1vw) * 51.5);
+}
+
+.lqip-right-bg-wines-16_9-img {
+  width: 55.4688vw;
+  width: calc(var(--100nvw, 1vw) * 55.4688);
+}
+
+.right-bg-wines-16_9-img {
+  width: 55.5729vw;
+  width: calc(var(--100nvw, 1vw) * 55.5729);
+}
+
+.lqip-4_3-img {
+}
+
+.lqip-left-bg-wines-4_3-img {
+  width: 56vw;
+  width: calc(var(--100nvw, 1vw) * 56);
+}
+
+.lqip-right-bg-wines-4_3-img {
+  width: 57.292vw;
+  width: calc(var(--100nvw, 1vw) * 57.292);
+}
+
+.left-bg-wines-4_3-img {
+  max-width: 51.5vw;
+  max-width: calc(var(--100nvw, 1vw) * 51.5);
+  width: 51.5vw;
+  width: calc(var(--100nvw, 1vw) * 51.5);
+}
+
+.right-bg-wines-4_3-img {
+  width: 57.153vw;
+  width: calc(var(--100nvw, 1vw) * 57.153);
+}
+
+.fade-inOut-opacity-wine-slider {
+  transition-property: opacity;
+  transition-duration: 0.75s;
+  transition-delay: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+/*
+ * END: Wine Slider 
+*/
+
+/*
+ * Wine Slider Portrait
+*/
+.wine-item-up-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* max-height: 60vh; */
+  max-height: 60%;
+  /* height: 60vh; */
+  height: 60%;
+  /* max-width: 100vw; */
+  max-width: 100%;
+  /* width: 100vw; */
+  width: 100%;
+}
+
+.wine-item-down-bg-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: 55%;
+  /* min-height: calc(var(--100vh, 1vh) * 55) !important; */
+  height: 55%;
+  /* height: calc(var(--100vh, 1vh) * 55) !important; */
+  min-width: 100%;
+  /* min-width: calc(var(--100vw, 1vw) * 100) !important; */
+  width: 100%;
+  /* width: calc(var(--100vw, 1vw) * 100) !important; */
+}
+
+/*
+ * Wine Store Silder
+*/
+.md-store-items-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  flex-grow: 1;
+  width: 75%;
+  max-width: 75%;
+  min-width: 75%;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  margin: auto 0 auto auto;
+  align-items: stretch;
+}
+
+.store-items-block {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.ls-store-items-block {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 75vw;
+  max-width: 75vw;
+  margin: auto 0 auto auto;
+  height: 100%;
+  max-height: 100%;
+}
+
+.is_cart_link {
+  color: #af7977;
+  text-decoration: underline;
+}
+/*
+ * END: Wine Store Slider 
+*/
+
+/*
+ * Basket and Wine Store Slider
+ */
+.header-underline {
+  max-width: max-content;
+}
+
+.header-underline h1.header-text {
+  margin: 0 auto 1em auto;
+  margin: 0 auto calc(0.2em + var(--100nvmin, 1vmin) * 0.2) auto;
+}
+
+.header-underline img {
+  max-width: 80%;
+  margin: auto auto auto 0;
+}
+
+/*
+ * END: Basket and Wine Store Slider
+*/
+
+/*
+ * Order Comp and Address Autocomplete Comp
+*/
+
+p.input-cell > * {
+  display: block;
+}
+
+.input-cell > label {
+  color: #767676;
+  font-size: calc(0.5em + 0.6vh);
+  font-size: calc(0.5em + var(--100nvh, 1vh) * 0.6);
+  padding-bottom: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+
+  max-width: 100%;
+  width: auto;
+  white-space: nowrap;
+  overflow: auto;
+
+  vertical-align: middle;
+}
+
+.input-cell > input {
+  background: transparent;
+  border-bottom: 0.05em solid #000;
+  padding: 0.5vh 0;
+  padding: calc(var(--100nvh, 1vh) * 0.5) 0;
+  width: 100%;
+  max-width: 100%;
+  font-size: calc(0.6em + 0.8vh);
+  font-size: calc(0.6em + var(--100nvh, 1vh) * 0.8);
+}
+
+/* Required field css marks */
+.input-cell label.is-required-field::after {
+  content: " *";
+  color: #767676;
+}
+
+.input-cell label.is-invalid-field::after {
+  content: " *";
+  color: #af7977;
+}
+
+.input-cell input.is-invalid-field,
+.input-cell span.is-invalid-field {
+  border-bottom: 0.05em solid #af7977 !important;
+}
+
+.input-cell span.is-invalid-field.checkmark {
+  border: 0.05em solid #af7977 !important;
+}
+
+/* Required note css marks */
+h2.is-required-note::after {
+  content: " *";
+  color: #767676;
+}
+
+h2.is-invalid-note::after {
+  content: " *";
+  color: #af7977;
+}
+
+h1.is-important-header,
+h2.is-important-header {
+  color: #af7977;
+}
+
+h1.is-important-header::after,
+h2.is-important-header::after {
+  content: " *";
+  color: #af7977;
+}
+
+.number-text,
+.drop-down-menu-number-text {
+  font-family: "steilgut_opensans", sans-serif;
+  font-weight: lighter;
+  text-transform: unset;
+  color: #ffffff;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+}
+
+.number-text {
+  font-size: 29px;
+  font-size: calc(0.5em + 1vmin);
+  font-size: calc(0.5em + var(--100nvmin, 1vmin));
+}
+
+.drop-down-menu-number-text {
+  font-size: 23px;
+  font-size: calc(0.575em + 0.5vmin);
+  font-size: calc(0.575em + var(--100nvmin, 1vmin) * 0.5);
+}
+
+/* Drop down box (for menu) */
+/*
+ * We set a white/steilgut-gold colors for links.
+ * We don't use tailwindcss color classes because 
+ * they overlap the classes below.
+ */
+.drop-down-box-links-inner-block a.drop-down-box-link,
+.drop-down-box-links-inner-block a.drop-down-box-link * {
+  color: #ffffff;
+}
+
+/* Desktop active links */
+.drop-down-box-links-inner-block a.active-drop-down-box-link,
+.drop-down-box-links-inner-block a.active-drop-down-box-link * {
+  color: #ebcb9a;
+}
+
+/* Landscape/portrait active links */
+.drop-down-box-inner-list a.active-drop-down-box-link,
+.drop-down-box-inner-list a.active-drop-down-box-link * {
+  color: #ebcb9a;
+}
+
+.drop-down-box-links-inner-block a.drop-down-box-link:hover,
+.drop-down-box-links-inner-block a.drop-down-box-link:hover * {
+  color: #ebcb9a;
+}
+
+.cookie-consent {
+  &__wrapper {
+    height: 20vh;
+    &__message {
+      display: block;
+      height: auto;
+      max-height: 100%;
+      overflow: auto;
+    }
+  }
+}
+
+.beige-bg-placeholder {
+  background-color: $STEILGUT_BEIGE_COLOR;
+}
